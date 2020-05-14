@@ -2,6 +2,10 @@
   "name": "nw_photography",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.14.2"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -10,6 +14,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-media": "^1.10.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-slick": "^0.25.2",
