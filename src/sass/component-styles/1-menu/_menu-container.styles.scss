@@ -15,6 +15,18 @@
   letter-spacing: 1px;
   transition: all .5s ease-out;
 
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
   animation: fade ease 1s;
   -webkit-animation: fade ease 1s;
   -moz-animation: fade ease 1s;

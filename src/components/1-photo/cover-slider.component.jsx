@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import { PHOTO_DATA } from '../../data-store/photos.data';
 
 
-class PhotoSlider extends Component {
+class CoverSlider extends Component {
   constructor(props) {
     super(props);
     
@@ -44,4 +44,4 @@ class PhotoSlider extends Component {
   }
 }
 
-export default PhotoSlider;
+export default CoverSlider;

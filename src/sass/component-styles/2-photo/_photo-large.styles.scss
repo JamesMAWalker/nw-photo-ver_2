@@ -5,6 +5,10 @@
     z-index: 99;
     cursor: url(../Icons/cursor-expand-shadow.svg), auto;
 
+    @include respond(phone) {
+      width: 100% !important;
+    }
+
     &--50 {
       object-position: 0 50%;
     }

@@ -10,6 +10,15 @@
     align-self: center;
     justify-self: center !important;
     background-color: $color-white-2;
+
+    @include respond(phone) {
+      grid-template-rows: repeat(9, 75vh);
+      grid-template-columns: 1fr;
+      overflow-y: scroll;
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 5vh;
+    }
   }
 
   &__col {

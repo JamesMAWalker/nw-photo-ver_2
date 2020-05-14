@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
-import PhotoSlider from './photo-slider.component';
+import CoverSlider from './cover-slider.component';
 import LandGrid from './land-grid.component';
 import PortraitGrid from './portrait-grid.component';
 import SelectorSlider from './selector-slider.component';
@@ -39,7 +39,7 @@ class PhotoContainer extends Component {
             onClick={this.handleClick}
             className={`photo-container photo-container--${this.resize()}`}
           >
-            <PhotoSlider />
+            <CoverSlider />
           </div>
         );
       } else if (currCat === 'calories') {

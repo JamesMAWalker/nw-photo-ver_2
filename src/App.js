@@ -13,16 +13,75 @@ import { ReactComponent as Logo } from './Icons/logo-icon-shadow.svg';
 import './sass/main.css'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menuIsOpen: false,
+    };
+  }
+
+  toggleMenu = () => {
+    this.setState({
+      menuIsOpen: !this.state.menuIsOpen,
+    });
+  };
 
   render() {
+    const { menuIsOpen } = this.state;
+
     return (
       <Switch>
-        <Route exact path='/' render={(rp) => <LandingPage {...rp} />} />
-        <Route exact path='/home' render={(rp) => <HomePage {...rp} />} />
-        <Route exact path='/about' render={(rp) => <AboutPage {...rp}/> } />
-        <Route exact path='/contact' render={(rp) => <ContactPage {...rp}/> } />
-        <Route exact path='/:catID' render={(rp) => <CategoryPage {...rp} />} />
-        <Route exact path='/:catID/:photoID' render={(rp) => <FullPhotoPage {...rp}/> } />
+        <Route
+          exact
+          path='/'
+          render={(rp) => (
+            <LandingPage
+              menuOpen={menuIsOpen}
+              toggleMenu={this.toggleMenu}
+              {...rp}
+            />
+          )}
+        />
+        <Route
+          exact
+          path='/home'
+          render={(rp) => (
+            <HomePage
+              menuOpen={menuIsOpen}
+              toggleMenu={this.toggleMenu}
+              {...rp}
+            />
+          )}
+        />
+        <Route
+          exact
+          path='/about'
+          render={(rp) => (
+            <AboutPage
+              menuOpen={menuIsOpen}
+              toggleMenu={this.toggleMenu}
+              {...rp}
+            />
+          )}
+        />
+        <Route exact path='/contact' render={(rp) => <ContactPage {...rp} />} />
+        <Route
+          exact
+          path='/:catID'
+          render={(rp) => (
+            <CategoryPage
+              menuOpen={menuIsOpen}
+              toggleMenu={this.toggleMenu}
+              {...rp}
+            />
+          )}
+        />
+        <Route
+          exact
+          path='/:catID/:photoID'
+          render={(rp) => <FullPhotoPage {...rp} />}
+        />
       </Switch>
     );
   }

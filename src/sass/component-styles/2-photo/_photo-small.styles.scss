@@ -12,13 +12,13 @@
     z-index: 99;
   }
 
-  &:active {
-    grid-row: 1 / span all;
-    grid-column: 1 / span all;
-    transition: all .5s;
-    transform: scale(.9);
-    object-fit: cover !important;
+  // &:active {
+  //   grid-row: 1 / span all;
+  //   grid-column: 1 / span all;
+  //   transition: all .5s;
+  //   transform: scale(.9);
+  //   object-fit: cover !important;
 
-    backdrop-filter: blur(0.8);
-  }
+  //   backdrop-filter: blur(0.8);
+  // }
 }

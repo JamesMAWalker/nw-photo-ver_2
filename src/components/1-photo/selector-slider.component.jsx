@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { Component, Fragment } from 'react';
+import Media from 'react-media';
 import Slider from 'react-slick';
+import { v4 as uuid } from 'uuid';
 
 import { PHOTO_DATA } from '../../data-store/photos.data';
 import PhotoLarge from './photo-large.component';
@@ -43,18 +44,45 @@ class SelectorSlider extends Component {
     };
 
     return (
-      <Slider className="selector__slider" {...settings}>
-        {
-          cat.map((photo) => (
-            <PhotoLarge 
-              catID={currCat}
-              photoID={photo.name}
-              key={uuid()} 
-              src={photo.link} 
-              alt={photo.name}/>
-          ))
-        }
-      </Slider>
+      <>
+        <Media
+          queries={{
+            desk: '(min-width: 53.125em)',
+            phone: '(max-width: 53.125em)',
+          }}
+        >
+          {(matches) => (
+            <Fragment>
+              {matches.desk && (
+                <Slider className='selector__slider' {...settings}>
+                  {cat.map((photo) => (
+                    <PhotoLarge
+                      catID={currCat}
+                      photoID={photo.name}
+                      key={uuid()}
+                      src={photo.link}
+                      alt={photo.name}
+                    />
+                  ))}
+                </Slider>
+              )}
+              {matches.phone && (
+                <div className='large-photo__container'>
+                  {cat.map((photo) => (
+                    <PhotoLarge
+                      catID={currCat}
+                      photoID={photo.name}
+                      key={uuid()}
+                      src={photo.link}
+                      alt={photo.name}
+                    />
+                  ))}
+                </div>
+              )}
+            </Fragment>
+          )}
+        </Media>
+      </>
     );
   }
 }

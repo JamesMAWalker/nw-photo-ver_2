@@ -5,6 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400&display=swap);
 
 $font-primary: 'Alegreya Sans', sans-serif;
+$font-title: 'Dawning of a New Day', cursive;
 
 html {
 	font-size: 62.5%; /* 1rem = 10px */
@@ -15,26 +16,22 @@ html {
 	margin-inline: 0 !important;
 	margin-block: 0 !important;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
-	// -ms-overflow-style: -ms-autohiding-scrollbar;
 	user-select: none;
 	transition: all .2s;
+	overflow: hidden;
+	
+	// ::-webkit-scrollbar-track {
+	// 	display: none;
+	// }
+	
+	// ::-webkit-scrollbar {
+	// 	display: none;
+	// }
 
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
 
 
-// ::-webkit-scrollbar {
-// 	outline: var(--color-primary);
-//     width: 5px;  
-// }
 
-// ::-webkit-scrollbar-thumb {
-// 	background-color: var(--color-grey-light-4);
-// 	border-radius: 10px;
-// }
 
 
 body {
@@ -45,8 +42,7 @@ body {
 	letter-spacing: -0.015em;
 	text-align: left;
 	margin: 0;
-	// overflow-x: hidden;
-	// overflow-y: scroll;
+	overflow: hidden;
 	transition: all .2s;
 }
 

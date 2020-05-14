@@ -25,6 +25,10 @@
     transition: all .2s;
     cursor: pointer;
 
+    @include respond(tab-land) {
+      font-size: 1.75rem;
+    }
+
     &--1 {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
@@ -52,6 +56,10 @@
     &--active {
       color: $color-black;
       font-weight: 400;
+
+      @include respond(phone) {
+        color: $color-white-1;
+      }
 
       &::before {
         content: '[';

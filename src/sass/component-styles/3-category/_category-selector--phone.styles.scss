@@ -1,0 +1,20 @@
+.phone-selector {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: $color-black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: scroll;
+
+  .category__item {
+    writing-mode: unset;  
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
