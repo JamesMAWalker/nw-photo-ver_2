@@ -670,6 +670,7 @@ input {
   gap: 2rem;
   height: 80%;
   width: 100%;
+  overflow-y: hidden;
   -ms-grid-row-align: center;
       align-self: center;
   justify-self: flex-start !important;
@@ -697,6 +698,7 @@ input {
   height: 100%;
   -webkit-transition: all .2s;
   transition: all .2s;
+  overflow-y: hidden;
 }
 
 .land__row--1 {
@@ -833,6 +835,26 @@ input {
       grid-template-rows: 1fr 1fr;
 }
 
+.photo-wrapper {
+  -webkit-box-shadow: 2px 2px 13px 0px #545454;
+          box-shadow: 2px 2px 13px 0px #545454;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
+}
+
+.photo-wrapper:hover .photo--small {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .photo--small {
   -webkit-box-shadow: 2px 2px 13px 0px #545454;
           box-shadow: 2px 2px 13px 0px #545454;
@@ -845,12 +867,6 @@ input {
      object-position: center;
   -webkit-transition: all .2s;
   transition: all .2s;
-}
-
-.photo--small:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  z-index: 99;
 }
 
 .photo--large {

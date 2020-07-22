@@ -27,7 +27,9 @@ class PhotoSmall extends Component {
     };
 
     return (
-      <img style={plchColor} className='photo--small' src={src} alt={alt} />
+      <div className='photo-wrapper'>
+        <img style={plchColor} className='photo--small' src={src} alt={alt} />
+      </div>
     );
   }
 }

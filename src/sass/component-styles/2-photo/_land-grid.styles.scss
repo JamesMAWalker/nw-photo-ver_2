@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    // background-color: $color-white-2;
     background-color: transparent;
     gap: 2rem;
     height: 80%;
     width: 100%;
+    overflow-y: hidden;
     align-self: center;
     justify-self: flex-start !important;
     transition: all .2s;
@@ -29,7 +29,10 @@
     height: 100%;
     transition: all .2s;
 
+    overflow-y: hidden;
+
     &--1 {
+      
       grid-template-columns: 3fr 3fr 4fr;
       grid-template-rows: 100%;
 
@@ -45,6 +48,7 @@
     }
 
     &--2 {
+      
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 100%;
 
@@ -60,24 +64,20 @@
     }
 
     &--3 {
+      
       grid-template-columns: 2.5fr 5fr 2.5fr;
       grid-template-rows: 100%;
 
-       @include respond(phone) {
+      @include respond(phone) {
         grid-template-rows: repeat(3, 100vh);
         grid-template-columns: 1fr;
       }
 
-       @include respond(smallPhone) {
+      @include respond(smallPhone) {
         grid-template-rows: repeat(3, 45vh);
         grid-template-columns: 1fr;
       }
     }
-
-    // &:active {
-    //   grid-row: 1 / span all;
-    //   grid-column: 1 / span all;
-    // }
   }
 }
 
