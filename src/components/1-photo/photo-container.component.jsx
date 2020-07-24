@@ -44,7 +44,10 @@ class PhotoContainer extends Component {
         );
       } else if (currCat === 'calories') {
         return (
-          <div className={`photo-container photo-container--${this.resize()}`}>
+          <div
+            style={{ justifyContent: 'flex-start', overflowX: 'scroll' }}
+            className={`photo-container photo-container--${this.resize()}`}
+          >
             <LandGrid currCat={currCat} />
           </div>
         );
