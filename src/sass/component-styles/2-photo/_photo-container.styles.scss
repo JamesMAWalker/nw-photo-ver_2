@@ -6,7 +6,7 @@
   background-color: $color-white-2;
   z-index: 2;
   overflow: hidden;
-  overflow-x: scroll;
+  // overflow-x: scroll;
   
   @include respond(tab-port) {
     width: 100vw !important;

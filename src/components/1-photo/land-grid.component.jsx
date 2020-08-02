@@ -39,14 +39,12 @@ class LandGrid extends Component {
               className={`land__sec-one--row${calsOne.indexOf(r) + 1}`}
             >
               {r.map((cal) => (
-                <LazyLoad key={uuid()} unmountIfInvisible={true}>
                   <PhotoSmall
                     className='photo--small'
                     alt={cal.name}
                     src={cal.link}
                     key={uuid()}
                   />
-                </LazyLoad>
               ))}
             </div>
           ))}

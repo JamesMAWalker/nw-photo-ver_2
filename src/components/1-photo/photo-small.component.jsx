@@ -3,11 +3,15 @@ import React, { Component } from 'react';
 class PhotoSmall extends Component {
   
   adjustCrop = name => {
-    if (name === 'the_BEET') {
-      return 'translateY(-75px)'
-    } else if (name === 'papurika_horizon') {
-      return 'translateY(-175px)';  
+    if (name === 'papurika_horizon') {
+      return 'translateY(-275px)';  
     } else if (name === 'you_know_you_want_one') {
+      return 'translateY(-175px)';  
+    } else if (name === 'seoul_food_1') {
+      return 'translateY(-75px)';  
+    } else if (name === 'seoul_food_2') {
+      return 'translateY(-75px)';  
+    } else if (name === 'seoul_food_3') {
       return 'translateY(-75px)';  
     } else {
       return 'center'
