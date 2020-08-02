@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as Logo } from '../../Icons/logo-icon-shadow.svg';
 
 function MenuHandle({ toggleMenu }) {
   const handleClick = (e) => {
@@ -8,8 +9,7 @@ function MenuHandle({ toggleMenu }) {
 
   return (
     <div className='menu-handle' onClick={handleClick} >
-      <span className="handle handle-top"></span>
-      <span className="handle handle-bottom"></span>
+      <Logo/>
     </div>
   );
 }

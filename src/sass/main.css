@@ -352,8 +352,8 @@ input {
 .menu-handle {
   position: absolute;
   top: 2.5rem;
-  right: 0;
-  height: 1.75rem;
+  left: 4rem;
+  height: 6rem;
   width: 5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
