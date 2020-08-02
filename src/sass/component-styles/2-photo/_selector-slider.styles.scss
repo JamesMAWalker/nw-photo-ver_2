@@ -8,7 +8,8 @@
     align-self: center;
     justify-self: center;
     display: flex;
-
+    transform: translateX(-10px);
+    
     &.slick-slide,
     slick-active,
     slick-current div {
@@ -41,7 +42,6 @@
 
   &__photo {
     object-fit: cover;
-    // object-position: 0 95%;
     width: 78vw !important;
     height: 80vh;
 

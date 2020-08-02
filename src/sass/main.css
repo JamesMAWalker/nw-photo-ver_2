@@ -459,8 +459,8 @@ input {
 }
 
 .selector__slider {
-  -webkit-box-shadow: 2px 2px 13px 0px #545454;
-          box-shadow: 2px 2px 13px 0px #545454;
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
   height: 80%;
   width: 100%;
   -ms-flex-item-align: center;
@@ -469,6 +469,8 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 .selector__slider.slick-slide,
@@ -531,6 +533,12 @@ input {
           flex-flow: column;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .large-photo__container {
+    background-color: #000;
+  }
+}
+
 .large-photo__container .photo--large {
   width: 100%;
   margin: .5rem 0;
@@ -539,8 +547,16 @@ input {
 
 @media only screen and (max-width: 31.25em) {
   .large-photo__container .photo--large {
-    height: 35vh;
+    height: 30vh;
     width: 100% !important;
+    margin-top: -5px;
+    border-top: 5px solid #fafafa;
+    border-bottom: 5px solid #fafafa;
+    border-left: 5px solid #fafafa;
+    border-right: 5px solid #fafafa;
+  }
+  .large-photo__container .photo--large:last-child {
+    margin-bottom: 10vh;
   }
 }
 
@@ -694,6 +710,7 @@ input {
   margin-top: 1rem;
   background-color: #a0a0a0;
   border-radius: 50px;
+  width: 100%;
   height: 4px;
 }
 
@@ -948,6 +965,20 @@ input {
   -ms-grid-column-align: center !important;
       justify-self: center !important;
   background-color: #fafafa;
+  overflow-y: scroll;
+}
+
+.portrait__grid::-webkit-scrollbar-thumb {
+  background-color: #fafafa;
+  border-radius: 50px;
+}
+
+.portrait__grid::-webkit-scrollbar {
+  margin-top: 1rem;
+  background-color: #a0a0a0;
+  border-radius: 50px;
+  width: 4px;
+  height: 10px;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -960,6 +991,8 @@ input {
     width: 100%;
     height: 100vh;
     margin-bottom: 5vh;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -969,7 +1002,6 @@ input {
   gap: 1rem;
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
 }
 
 .portrait__col--1 {
@@ -994,8 +1026,8 @@ input {
 }
 
 .photo-wrapper {
-  -webkit-box-shadow: 2px 2px 13px 0px #545454;
-          box-shadow: 2px 2px 13px 0px #545454;
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
   position: relative;
   height: 100%;
   width: 100%;
@@ -1014,8 +1046,8 @@ input {
 }
 
 .photo--small {
-  -webkit-box-shadow: 2px 2px 13px 0px #545454;
-          box-shadow: 2px 2px 13px 0px #545454;
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
   position: relative;
   height: 100%;
   width: 100%;

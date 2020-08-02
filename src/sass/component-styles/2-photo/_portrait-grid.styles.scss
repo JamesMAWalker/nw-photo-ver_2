@@ -1,6 +1,7 @@
 .portrait {
   
   &__grid {
+    @include elegantScroll(4px, 10px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -10,6 +11,7 @@
     align-self: center;
     justify-self: center !important;
     background-color: $color-white-2;
+    overflow-y: scroll;
 
     @include respond(phone) {
       grid-template-rows: repeat(9, 75vh);
@@ -18,6 +20,7 @@
       width: 100%;
       height: 100vh;
       margin-bottom: 5vh;
+      transform: translateX(0px);
     }
   }
 
@@ -26,7 +29,7 @@
     gap: 1rem;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    // overflow: scroll;
 
     &--1 {
       grid-template-columns: 100%;

@@ -85,8 +85,36 @@
 }
 
 @mixin normalShadow {
-    box-shadow: 2px 2px 13px 0px rgba(84,84,84,1);
+    box-shadow: 2px 2px 7px 0px rgba(84,84,84,1);
 }
+
+@mixin elegantScroll($width, $height) {
+  &::-webkit-scrollbar-thumb {
+    background-color:$color-grey-light-2;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar {
+    margin-top: 1rem;
+    background-color: $color-grey-light-3;
+    border-radius: 50px;
+    width: $width;
+    // height: 4px;
+    height: $height;
+  }
+}
+
+//  &::-webkit-scrollbar-thumb {
+//       background-color:$color-grey-light-2;
+    
+//       border-radius: 50px;
+//     }
+
+//     &::-webkit-scrollbar {
+//       margin-top: 1rem;
+//       background-color: $color-grey-light-3;
+//       border-radius: 50px;
+//       height: 4px;
+//     }
 
 
 // Breakpoints //
