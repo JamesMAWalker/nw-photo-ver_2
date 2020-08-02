@@ -4,31 +4,29 @@ class PhotoSmall extends Component {
   
   adjustCrop = name => {
     if (name === 'the_BEET') {
-      return '50% 75%'
-    } else if (name === 'glasses_man') {
-      return 'top'  
-    } else if (name === 'intense_girl') {
-      return '20% 20%'  
-    } else if (name === 'dog_hat') {
-      return '45% 20%'  
-    } else if (name === 'white_black_girl') {
-      return '68%'  
+      return 'translateY(-75px)'
+    } else if (name === 'papurika_horizon') {
+      return 'translateY(-175px)';  
+    } else if (name === 'you_know_you_want_one') {
+      return 'translateY(-75px)';  
     } else {
       return 'center'
     }
   };  
+
+
 
   render() {
     const { alt, src, bgco } = this.props;
 
     const plchColor = {
       backgroundColor: bgco,
-      objectPosition: this.adjustCrop(alt)
+      transform: this.adjustCrop(alt)
     };
 
     return (
-      <div className='photo-wrapper'>
-        <img style={plchColor} className='photo--small' src={src} alt={alt} />
+      <div style={plchColor} className='photo-wrapper'>
+        <img className='photo--small' src={src} alt={alt} />
       </div>
     );
   }

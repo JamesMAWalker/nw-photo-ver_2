@@ -682,6 +682,8 @@ input {
           flex-grow: 4;
   overflow: hidden;
   overflow-x: scroll;
+  scrollbar-color: #a0a0a0 #fafafa;
+  scrollbar-width: thin;
 }
 
 .land__grid::-webkit-scrollbar-thumb {
@@ -1006,8 +1008,8 @@ input {
 }
 
 .photo-wrapper:hover .photo--small {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transition: all .5s;
   transition: all .5s;
 }

@@ -6,9 +6,10 @@
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  // transform: translateY(-40px);
 
   &:hover .photo--small {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: all .5s;
   }
 }

@@ -8,55 +8,55 @@ export const PHOTO_DATA = {
         name: 'blue_flower_fish',
         bgco: '#0054DE',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1583911193/NW_Photography/blue_flower_fish_bruhbz.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1583911193/NW_Photography/blue_flower_fish_bruhbz.jpg',
       },
       onions_on_stone: {
         name: 'onions_on_stone',
         bgco: '#9A4372',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1583911192/NW_Photography/bokeh_onions_stone_bwz0yk.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1583911192/NW_Photography/bokeh_onions_stone_bwz0yk.jpg',
       },
       ribs_red_bg: {
         name: 'ribs_red_bg',
         bgco: '#C13214',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1584613209/NW_Photography/bokeh_ribz_apnfcw.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1584613209/NW_Photography/bokeh_ribz_apnfcw.jpg',
       },
       friendly_omelette: {
         name: 'friendly_omelette',
         bgco: '#D5B876',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1584613210/NW_Photography/friendly_omelette_wzgsgz.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1584613210/NW_Photography/friendly_omelette_wzgsgz.jpg',
       },
       meats_on_meats: {
         name: 'meats_on_meats',
         bgco: '#6C3412',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1584613210/NW_Photography/hella_meat_m6iwms.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1584613210/NW_Photography/hella_meat_m6iwms.jpg',
       },
       meat_flowers: {
         name: 'meat_flowers',
         bgco: '#F8E300',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1584613321/NW_Photography/meat_and_petals_ukhnbw.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1584613321/NW_Photography/meat_and_petals_ukhnbw.jpg',
       },
       la_wrap: {
         name: 'la_wrap',
         bgco: '#93C666',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1584613210/NW_Photography/santamonica_wrap_sfhiqs.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1584613210/NW_Photography/santamonica_wrap_sfhiqs.jpg',
       },
       the_BEET: {
         name: 'the_BEET',
         bgco: '#D41880',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1583911194/NW_Photography/the_BEET_ylavee.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1583911194/NW_Photography/the_BEET_ylavee.jpg',
       },
       splatter_food: {
         name: 'splatter_food',
         bgco: '#3A4045',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1583911194/NW_Photography/splatter_food_v9mzd6.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1583911194/NW_Photography/splatter_food_v9mzd6.jpg',
       },
       full_glasses: {
         name: 'full_glasses',
@@ -68,13 +68,13 @@ export const PHOTO_DATA = {
         name: 'dandy_asparagus',
         bgco: '#1E1A19',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444773/NW_Photography/_MG_0695_av7mrb.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444773/NW_Photography/_MG_0695_av7mrb.jpg',
       },
       smug_sandwich: {
         name: 'smug_sandwich',
         bgco: '#E60000',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444761/NW_Photography/_MG_2922_lgp6qq.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444761/NW_Photography/_MG_2922_lgp6qq.jpg',
       },
       full_plates: {
         name: 'full_plates',
@@ -86,55 +86,55 @@ export const PHOTO_DATA = {
         name: 'seoul_food_1',
         bgco: '#5F5D58',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444759/NW_Photography/_MG_1608_fabnnu.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444759/NW_Photography/_MG_1608_fabnnu.jpg',
       },
       seoul_food_2: {
         name: 'seoul_food_2',
         bgco: '#FDAC56',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444754/NW_Photography/_MG_1377_femkiq.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444754/NW_Photography/_MG_1377_femkiq.jpg',
       },
       seoul_food_3: {
         name: 'seoul_food_3',
         bgco: '#EBC550',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444757/NW_Photography/_MG_1322_kcjqfo.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444757/NW_Photography/_MG_1322_kcjqfo.jpg',
       },
       avo_toast: {
         name: 'avo_toast',
         bgco: '#D2D966',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444767/NW_Photography/_MG_3047_to4pzg.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444767/NW_Photography/_MG_3047_to4pzg.jpg',
       },
       taco_sundae: {
         name: 'taco_sundae',
         bgco: '#EDC2AC',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444767/NW_Photography/_MG_3196_iwc5kr.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444767/NW_Photography/_MG_3196_iwc5kr.jpg',
       },
       mustard_BB: {
         name: 'mustard_BB',
         bgco: '#E3C20D',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444761/NW_Photography/_MG_2889_adysbg.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444761/NW_Photography/_MG_2889_adysbg.jpg',
       },
       papurika_vert: {
         name: 'papurika_vert',
         bgco: '#A22023',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444773/NW_Photography/_MG_0622_noqmor.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444773/NW_Photography/_MG_0622_noqmor.jpg',
       },
       papurika_horizon: {
         name: 'papurika_horizon',
         bgco: '#3D0804',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444772/NW_Photography/_MG_0653_lucbpy.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444772/NW_Photography/_MG_0653_lucbpy.jpg',
       },
       you_know_you_want_one: {
         name: 'you_know_you_want_one',
         bgco: '#8AA0AC',
         link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/q_10,f_auto/v1587444771/NW_Photography/_MG_0584_nwd37t.jpg',
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,w_700,h_500/v1587444771/NW_Photography/_MG_0584_nwd37t.jpg',
       },
     },
   },
