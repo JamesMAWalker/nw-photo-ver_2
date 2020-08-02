@@ -5,10 +5,6 @@
   display: flex;
   flex-flow: column;
 
-  @include respond(smallPhone) {
-    background-color: #000;
-  }
-
   .photo--large {
     width: 100%;
     margin: .5rem 0;
@@ -17,7 +13,7 @@
     @include respond(smallPhone) {
       height: 30vh;
       width: 100% !important;
-      margin-top: -5px;
+      // margin-top: -5px;
       border-top: 5px solid $color-grey-light-2;
       border-bottom: 5px solid $color-grey-light-2;
       border-left: 5px solid $color-grey-light-2;

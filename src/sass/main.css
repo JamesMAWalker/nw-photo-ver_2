@@ -533,12 +533,6 @@ input {
           flex-flow: column;
 }
 
-@media only screen and (max-width: 31.25em) {
-  .large-photo__container {
-    background-color: #000;
-  }
-}
-
 .large-photo__container .photo--large {
   width: 100%;
   margin: .5rem 0;
@@ -549,7 +543,6 @@ input {
   .large-photo__container .photo--large {
     height: 30vh;
     width: 100% !important;
-    margin-top: -5px;
     border-top: 5px solid #fafafa;
     border-bottom: 5px solid #fafafa;
     border-left: 5px solid #fafafa;
