@@ -3,7 +3,6 @@
     width: 78vw !important;
     height: 80vh;
     z-index: 99;
-    cursor: url(../Icons/cursor-expand-shadow.svg), auto;
 
     @include respond(phone) {
       width: 100% !important;
