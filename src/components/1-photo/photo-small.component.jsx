@@ -3,22 +3,10 @@ import React, { Component } from 'react';
 class PhotoSmall extends Component {
   
   adjustCrop = name => {
-    if (name === 'papurika_horizon') {
-      return 'translateY(0px)';  
-    } else if (name === 'you_know_you_want_one') {
-      return 'translateY(0px)';  
-    } else if (name === 'seoul_food_1') {
-      return 'translateY(-35px)';  
-    } else if (name === 'seoul_food_2') {
-      return 'translateY(-35px)';  
-    } else if (name === 'seoul_food_3') {
-      return 'translateY(-35px)';  
-    } else {
-      return 'center'
+    if (name === 'papurika_horizon' & window.innerWidth > 850) {
+      return 'translateY(-10px)';  
     }
   };  
-
-
 
   render() {
     const { alt, src, bgco } = this.props;
@@ -30,7 +18,7 @@ class PhotoSmall extends Component {
 
     return (
       <div style={plchColor} className='photo-wrapper'>
-        <img className='photo--small' src={src} alt={alt} />
+        <img style={plchColor} className='photo--small' src={src} alt={alt} />
       </div>
     );
   }
