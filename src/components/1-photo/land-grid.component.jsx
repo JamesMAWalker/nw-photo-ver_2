@@ -1,6 +1,5 @@
 import React, { Component, Lazy } from 'react';
 import { v4 as uuid } from 'uuid';
-import LazyLoad from 'react-lazyload';
 
 import PhotoSmall from './photo-small.component';
 
@@ -55,14 +54,12 @@ class LandGrid extends Component {
               key={uuid()}
               className={`sec2__photo-${calsTwo.indexOf(cal) + 1}`}
             >
-              <LazyLoad key={uuid()} unmountIfInvisible={true}>
-                <PhotoSmall
-                  className='photo--small'
-                  alt={cal.name}
-                  src={cal.link}
-                  key={uuid()}
-                />
-              </LazyLoad>
+              <PhotoSmall
+                className='photo--small'
+                alt={cal.name}
+                src={cal.link}
+                key={uuid()}
+              />
             </div>
           ))}
         </div>
@@ -73,14 +70,12 @@ class LandGrid extends Component {
               className={`land__sec-three--row${calsThree.indexOf(r) + 1}`}
             >
               {r.map((cal) => (
-                <LazyLoad key={uuid()} unmountIfInvisible={true}>
                   <PhotoSmall
                     className='photo--small'
                     alt={cal.name}
                     src={cal.link}
                     key={uuid()}
                   />
-                </LazyLoad>
               ))}
             </div>
           ))}

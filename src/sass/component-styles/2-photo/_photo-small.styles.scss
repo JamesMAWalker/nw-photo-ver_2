@@ -7,6 +7,10 @@
   object-position: center;
   overflow: hidden;
 
+  @include respond(phone) {
+    box-shadow: none;
+  }
+
   &:hover .photo--small {
     transform: scale(1.05);
     transition: all .5s;
@@ -21,4 +25,8 @@
   object-fit: cover;
   object-position: center;
   transition: all .2s;
+
+  @include respond(phone) {
+    box-shadow: none;
+  }
 }

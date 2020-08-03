@@ -22,7 +22,7 @@
   }
 
   @include respond(phone) {
-    height: 8rem;
+    display: none;
   }
   
   &:hover {

@@ -4,15 +4,15 @@ class PhotoSmall extends Component {
   
   adjustCrop = name => {
     if (name === 'papurika_horizon') {
-      return 'translateY(-275px)';  
+      return 'translateY(0px)';  
     } else if (name === 'you_know_you_want_one') {
-      return 'translateY(-175px)';  
+      return 'translateY(0px)';  
     } else if (name === 'seoul_food_1') {
-      return 'translateY(-75px)';  
+      return 'translateY(-35px)';  
     } else if (name === 'seoul_food_2') {
-      return 'translateY(-75px)';  
+      return 'translateY(-35px)';  
     } else if (name === 'seoul_food_3') {
-      return 'translateY(-75px)';  
+      return 'translateY(-35px)';  
     } else {
       return 'center'
     }

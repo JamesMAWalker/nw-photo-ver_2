@@ -8,16 +8,18 @@
   .photo--large {
     width: 100%;
     margin: .5rem 0;
-    height: 80vh;
+    height: 25vh;
     
     @include respond(smallPhone) {
-      height: 30vh;
+      // height: 27vh;
       width: 100% !important;
-      // margin-top: -5px;
-      border-top: 5px solid $color-grey-light-2;
-      border-bottom: 5px solid $color-grey-light-2;
+      object-fit: contain;
       border-left: 5px solid $color-grey-light-2;
       border-right: 5px solid $color-grey-light-2;
+
+      &:not(:last-child) {
+        // margin-bottom: -5rem;
+      }
 
       &:last-child {
         margin-bottom: 10vh;
