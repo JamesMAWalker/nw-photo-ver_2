@@ -1448,7 +1448,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 35%;
+  width: 20%;
   height: 100%;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1461,7 +1461,7 @@ input {
   }
 }
 
-.about__header-section {
+.about__heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1469,29 +1469,59 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 3rem;
-}
-
-.about__heading {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Dawning of a New Day", cursive;
+  font-style: normal;
   font-weight: lighter;
   color: #fe620d;
-  margin-bottom: -1rem;
+  color: #FFC5A6;
+}
+
+.about__heading--1 {
+  font-size: 3rem;
+}
+
+.about__heading--2 {
+  font-size: 5rem;
+}
+
+.about .divider {
+  height: 4rem;
+  padding: 3rem;
 }
 
 .about__text {
-  font-size: 2.75rem;
-  line-height: 130%;
-  font-weight: 300;
-  letter-spacing: 2px;
-  width: 55%;
+  width: 25%;
+  padding: 2.75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
+  line-height: 150%;
+  font-size: 2.25rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #FFC5A6;
+}
+
+.about__text--1 {
+  margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -1504,40 +1534,31 @@ input {
 .about__photo-section {
   position: relative;
   height: 100vh;
-  width: 65%;
-  background-color: rgba(254, 98, 13, 0.75);
+  width: 85%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #FE620D;
+  background-image: url("https://res.cloudinary.com/jameswalker-work/image/upload/v1588406318/NW_Photography/nisa-flowers_vcgvgc.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media only screen and (max-width: 53.125em) {
   .about__photo-section {
     height: 55vh;
     width: 100%;
-  }
-}
-
-.about__photo {
-  position: absolute;
-  width: 100%;
-  height: 85%;
-  right: 8%;
-  top: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media only screen and (max-width: 53.125em) {
-  .about__photo {
-    position: unset;
-    height: 100%;
-    width: 100%;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    top: 0;
-    right: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
