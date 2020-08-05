@@ -88,6 +88,10 @@
     box-shadow: 2px 2px 7px 0px rgba(84,84,84,1);
 }
 
+@mixin leftShadow {
+    box-shadow:-1px 0px 7px 1px rgba(0, 0, 0, 0.623);
+}
+
 @mixin elegantScroll($width, $height) {
   &::-webkit-scrollbar-thumb {
     background-color:$color-grey-light-2;

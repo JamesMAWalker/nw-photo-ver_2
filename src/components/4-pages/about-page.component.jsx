@@ -8,13 +8,32 @@ import MenuPhone from '../2-menu/menu-container--phone.component';
 import MenuContainer from '../2-menu/menu-container.component';
 
 class AboutPage extends Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      isPhone: window.innerWidth < 850
+    };
+  }
+  
+  
   render() {
     const { toggleMenu, menuOpen, history } = this.props;
 
     return (
       <>
       <div className='about'>
-          <MenuContainer/>
+          {
+            this.state.isPhone ? 
+            <MenuPhone 
+              toggleMenu={toggleMenu} 
+              history={history}
+              menuOpen={menuOpen}
+            /> 
+            : 
+            <MenuContainer/>
+          }
           <div className='about__photo-section'>
             <div className='about__text'>
                 <h1 className='about__heading'>
@@ -27,8 +46,8 @@ class AboutPage extends Component {
                 Nishelle loves to tell stories... through her photography.
               </span>
               <span className='about__text--2'>
-                Her stories are based upon daydreams, reality and often a
-                mixture of the two - depending on how she see's fit. Through her
+                Her stories are based upon daydreams, reality, and often a
+                mixture of the two - depending on how she sees fit. Through her
                 camera she expresses the inner world of both herself and her
                 subjects. Together they make magic!
               </span>

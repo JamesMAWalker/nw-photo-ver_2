@@ -1496,7 +1496,10 @@ input {
 }
 
 .about__text {
+  -webkit-box-shadow: -1px 0px 7px 1px rgba(0, 0, 0, 0.623);
+          box-shadow: -1px 0px 7px 1px rgba(0, 0, 0, 0.623);
   width: 25%;
+  height: 100%;
   padding: 2.75%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1528,6 +1531,8 @@ input {
   .about__text {
     font-size: 1.75rem;
     width: 100%;
+    color: #fafafa;
+    margin-top: -15vh;
   }
 }
 
@@ -1557,8 +1562,14 @@ input {
 
 @media only screen and (max-width: 53.125em) {
   .about__photo-section {
-    height: 55vh;
+    height: 100%;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("https://res.cloudinary.com/jameswalker-work/image/upload/v1588406318/NW_Photography/nisa-flowers_vcgvgc.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://res.cloudinary.com/jameswalker-work/image/upload/v1588406318/NW_Photography/nisa-flowers_vcgvgc.jpg");
+    background-position: center;
+    background-size: cover;
   }
 }
 /*# sourceMappingURL=main.css.map */
