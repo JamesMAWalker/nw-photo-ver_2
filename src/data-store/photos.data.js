@@ -222,14 +222,14 @@ export const PHOTO_DATA = {
     name: 'Editorial',
     photos: {
       afolabi_1: {
-        name: 'afolabi_1',
-        link:
-          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_auto/v1585231764/NW_Photography/Editorial_Afolabi-1_to9sds.png',
-      },
-      afolabi_2: {
         name: 'afolabi_2',
         link:
           'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_auto/v1585231763/NW_Photography/Editorial_Afolabi-2_podhb1.png',
+      },
+      afolabi_2: {
+        name: 'afolabi_1',
+        link:
+          'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_auto/v1585231764/NW_Photography/Editorial_Afolabi-1_to9sds.png',
       },
       law_lady: {
         name: 'law_lady',
