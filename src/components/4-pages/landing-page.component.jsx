@@ -4,7 +4,7 @@ import MenuContainer from '../2-menu/menu-container.component';
 import PhotoContainer from '../1-photo/photo-container.component';
 import MenuHandle from '../2-menu/menu-handle.component';
 
-import { ReactComponent as Logo } from '../../Icons/logo-icon-shadow.svg';
+import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
 import MenuPhone from '../2-menu/menu-container--phone.component';
 
 class LandingPage extends Component {
@@ -25,7 +25,7 @@ class LandingPage extends Component {
           menuOpen={menuOpen}
         />
         <Logo
-          style={{ cursor: 'pointer', display: menuOpen ? 'none' : 'unset' }}
+          style={{ cursor: 'pointer'}}
           className='site-logo--photo'
           name='home'
           onClick={this.toHome}

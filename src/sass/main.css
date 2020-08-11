@@ -116,8 +116,14 @@ input {
   position: absolute;
   top: 1.5rem;
   left: 4rem;
-  z-index: 99;
-  fill: white;
+  z-index: 999;
+  fill: #a0a0a0;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .site-logo--photo {
+    display: none;
+  }
 }
 
 .site-logo--menu {
@@ -372,10 +378,9 @@ input {
 
 .menu-handle {
   position: absolute;
-  top: 2.5rem;
-  left: 4rem;
-  height: 6rem;
-  width: 5rem;
+  top: 3.5rem;
+  left: 1.5rem;
+  height: 7rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -387,6 +392,7 @@ input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 999;
+  fill: #a0a0a0;
   display: none;
 }
 
@@ -398,22 +404,38 @@ input {
   }
 }
 
-.menu-handle:hover .handle {
-  background-color: #7e7e7e;
+.menu-closer {
+  position: absolute;
+  top: 3.5rem;
+  left: 3.5rem;
+  height: 7rem;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  font-family: "Alegreya Sans", sans-serif;
+  text-transform: uppercase;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 999;
+  fill: #a0a0a0;
+  display: none;
 }
 
-.menu-handle .handle {
-  background-color: #C9C9C9;
-}
-
-.menu-handle .handle-top {
-  width: 5rem;
-  height: 3px;
-}
-
-.menu-handle .handle-bottom {
-  width: 3rem;
-  height: 3px;
+@media only screen and (max-width: 53.125em) {
+  .menu-closer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .photo-container {
@@ -467,6 +489,13 @@ input {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .photo-single {
+    -o-object-position: 95% 0;
+       object-position: 95% 0;
+  }
 }
 
 .photo-slider {

@@ -46,12 +46,12 @@ class MenuPhone extends Component {
     };
 
     return (
-      <div style={openClose} onClick={() => toggleMenu()} className='menu-container--phone'>
-        <Logo
-          name='home'
-          onClick={this.handleLogoClick}
-          className='site-logo--menu'
-        />
+      <div
+        style={openClose}
+        onClick={() => toggleMenu()}
+        className='menu-container--phone'
+      >
+    
         <div className='links__container'>{this.renderLinks(photoData)}</div>
         <div className='menu-divider'></div>
         <div className='site-links__container'>

@@ -1,15 +1,17 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../Icons/logo-icon-shadow.svg';
+import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
 
-function MenuHandle({ toggleMenu }) {
+function MenuHandle({ toggleMenu, menuOpen }) {
   const handleClick = (e) => {
     e.stopPropagation();
     toggleMenu();
   }
 
+
+
   return (
-    <div className='menu-handle' onClick={handleClick} >
-      <Logo/>
+    <div className={ menuOpen ? 'menu-closer' : 'menu-handle'} onClick={handleClick}>
+      {menuOpen ? <span onClick={handleClick}>X</span> : <Logo />}
     </div>
   );
 }

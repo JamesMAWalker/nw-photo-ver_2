@@ -1,34 +1,40 @@
 .menu-handle {
   position: absolute;
-  top: 2.5rem;
-  left: 4rem;
-  height: 6rem;
-  width: 5rem;
+  top: 3.5rem;
+  left: 1.5rem;
+  height: 7rem;
+  // width: 2rem;
   flex-flow: column;
   align-items: flex-end;
   justify-content: space-between;
   z-index: 999;
+  fill: $color-grey-light-3;
   display: none;
 
   @include respond(phone) {
     display: flex;
   }
 
-  &:hover .handle {
-    background-color: $color-grey-dark;
-  }
-  
-  .handle {
-    background-color: $color-grey-light-1;
+}
 
-    &-top {
-      width: 5rem;
-      height: 3px;
-    }
+.menu-closer {
+  position: absolute;
+  top: 3.5rem;
+  left: 3.5rem;
+  height: 7rem;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  transform: scaleY(.8);
+  flex-flow: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 999;
+  fill: $color-grey-light-3;
+  display: none;
 
-    &-bottom {
-      width: 3rem;
-      height: 3px;
-    }
+  @include respond(phone) {
+    display: flex;
   }
 }
