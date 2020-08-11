@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
@@ -23,25 +23,27 @@ class AboutPage extends Component {
 
     return (
       <>
-      <div className='about'>
-          {
-            this.state.isPhone ? 
-            <MenuPhone 
-              toggleMenu={toggleMenu} 
-              history={history}
-              menuOpen={menuOpen}
-            /> 
-            : 
-            <MenuContainer/>
-          }
+        <div className='about'>
+          {this.state.isPhone ? (
+            <nav>
+              <MenuHandle menuOpen={menuOpen} toggleMenu={toggleMenu} />
+              <MenuPhone
+                toggleMenu={toggleMenu}
+                history={history}
+                menuOpen={menuOpen}
+              />
+            </nav>
+          ) : (
+            <MenuContainer />
+          )}
           <div className='about__photo-section'>
             <div className='about__text'>
-                <h1 className='about__heading'>
-                  <span className='about__heading--1'>About</span>
-                  <br />
-                  <span className='about__heading--2'>Nishelle</span>
-                </h1>
-                <Divider className='divider' />
+              <h1 className='about__heading'>
+                <span className='about__heading--1'>About</span>
+                <br />
+                <span className='about__heading--2'>Nishelle</span>
+              </h1>
+              <Divider className='divider' />
               <span className='about__text--1'>
                 Nishelle loves to tell stories... through her photography.
               </span>

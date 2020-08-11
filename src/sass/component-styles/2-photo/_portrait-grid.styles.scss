@@ -14,12 +14,14 @@
     overflow-y: scroll;
 
     @include respond(phone) {
-      grid-template-rows: repeat(9, 75vh);
+      @include elegantScroll(0px, 0px);
+      grid-template-rows: repeat(9, 100vh);
       grid-template-columns: 1fr;
-      overflow-y: scroll;
+      background-color: #000;
       width: 100%;
       height: 100vh;
       margin-bottom: 5vh;
+      margin-top: 5vh;
       transform: translateX(0px);
     }
   }
