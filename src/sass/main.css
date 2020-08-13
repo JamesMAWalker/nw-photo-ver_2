@@ -439,7 +439,7 @@ input {
 }
 
 .cover-single {
-  height: 90%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,7 +1433,7 @@ input {
 .category__item--active::before {
   content: '[';
   font-weight: bold;
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 .category__item--active::after {

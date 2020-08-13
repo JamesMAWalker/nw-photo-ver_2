@@ -10,7 +10,7 @@ class CategoryItem extends Component {
 
   render() {
     const { current, currCat, name, indPos } = this.props;
-    let activate = current === name ? 'category__item--active' : '';
+    let activate = currCat === name ? 'category__item--active' : '';
     let removeCat = name === 'coverphotos' ? 'none' : 'flex';
     
     console.log('current cat is --', current);
