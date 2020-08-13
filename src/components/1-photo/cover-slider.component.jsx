@@ -27,12 +27,16 @@ class CoverSlider extends Component {
 
     const { singleCover } = this.state;
 
-    console.log(PHOTO_DATA.dreams);
-    console.log(singleCover);
+    const style = {
+      objectPosition: "0% 36% !important"
+    }
+
+    console.log(style);
 
     return (
       <Slider className='photo-slider' {...settings}>
         <img
+          style={style}
           className='photo-single'
           src={singleCover.link}
           alt={singleCover.name}
