@@ -501,7 +501,6 @@ input {
   transition: all .5s ease-out;
   background-color: #fafafa;
   z-index: 2;
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -552,8 +551,6 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
 }
 
 .selector__slider.slick-slide,
@@ -840,7 +837,12 @@ input {
 }
 
 .land__sec-one > * {
-  overflow-y: hidden;
+  overflow-y: visible;
+}
+
+.land__sec-one > * > * {
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
 }
 
 .land__sec-one--row1 {
@@ -857,7 +859,6 @@ input {
       grid-template-columns: 3fr 3fr 4fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  overflow-y: hidden;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -934,6 +935,12 @@ input {
       grid-template-rows: repeat(3, 26vh);
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  overflow-y: visible;
+}
+
+.land__sec-two > * {
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -1041,6 +1048,17 @@ input {
       grid-template-columns: 1fr;
   -ms-grid-rows: (26vh)[3];
       grid-template-rows: repeat(3, 26vh);
+  overflow-y: visible;
+}
+
+.land__sec-three > * {
+  overflow-y: visible;
+}
+
+.land__sec-three > * > * {
+  overflow-y: visible;
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -1054,10 +1072,6 @@ input {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
   }
-}
-
-.land__sec-three > * {
-  overflow-y: hidden;
 }
 
 .land__sec-three--row1 {
@@ -1125,6 +1139,7 @@ input {
       grid-template-columns: 3fr 3fr 4fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  overflow-y: hidden !important;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -1264,8 +1279,6 @@ input {
 }
 
 .photo-wrapper {
-  -webkit-box-shadow: 2px 2px 7px 0px #545454;
-          box-shadow: 2px 2px 7px 0px #545454;
   position: relative;
   height: 100%;
   width: 100%;
