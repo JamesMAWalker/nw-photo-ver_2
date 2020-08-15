@@ -3,9 +3,10 @@
     width: 78vw !important;
     height: 80vh;
     z-index: 99;
-
+    
     @include respond(phone) {
       width: 100% !important;
+
     }
 
     &--50 {

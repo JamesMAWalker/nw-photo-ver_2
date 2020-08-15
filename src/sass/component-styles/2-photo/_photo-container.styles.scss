@@ -10,6 +10,10 @@
     width: 100vw !important;
   }
 
+  @include respond(phone-land) {
+    background-color: #000;
+  }
+
   @include respond(phone) {
     height: 100vh;
   }  

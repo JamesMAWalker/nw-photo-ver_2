@@ -13,6 +13,13 @@
     background-color: $color-white-2;
     overflow-y: scroll;
 
+    @include respond(phone-land) {
+      grid-template-rows: repeat(9, 275vh) !important;
+      margin-right: 12vw;
+      margin-left: 12vw;
+      background-color: #000;
+    }
+
     @include respond(phone) {
       @include elegantScroll(0px, 0px);
       grid-template-rows: repeat(9, 100vh);
@@ -23,6 +30,13 @@
       margin-bottom: 5vh;
       margin-top: 5vh;
       transform: translateX(0px);
+    }
+
+    .photo--small {
+
+      @include respond(phone-land) {
+        object-fit: contain;
+      }
     }
   }
 

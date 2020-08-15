@@ -509,6 +509,12 @@ input {
   }
 }
 
+@media only screen and (max-height: 377px) {
+  .photo-container {
+    background-color: #000;
+  }
+}
+
 @media only screen and (max-width: 53.125em) {
   .photo-container {
     height: 100vh;
@@ -611,22 +617,45 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  background-color: #000;
 }
 
 .large-photo__container .photo--large {
-  width: 100%;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: .5rem 0;
   height: 25vh;
+}
+
+@media only screen and (max-height: 377px) {
+  .large-photo__container .photo--large {
+    height: 90vh !important;
+    width: 100% !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
+  }
 }
 
 @media only screen and (max-width: 31.25em) {
   .large-photo__container .photo--large {
     width: 100% !important;
-    -o-object-fit: contain;
-       object-fit: contain;
-    border-left: 5px solid #fafafa;
-    border-right: 5px solid #fafafa;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
   }
+}
+
+@media only screen and (max-width: 31.25em) and (max-height: 25em) and (max-width: 30em) {
+  .large-photo__container .photo--large {
+    height: 90vh !important;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
   .large-photo__container .photo--large:last-child {
     margin-bottom: 10vh;
   }
@@ -784,6 +813,13 @@ input {
   border-radius: 50px;
   width: 100%;
   height: 4px;
+}
+
+@media only screen and (max-height: 377px) {
+  .land__grid {
+    -ms-grid-columns: 97.5vw !important;
+        grid-template-columns: 97.5vw !important;
+  }
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -950,6 +986,13 @@ input {
   }
 }
 
+@media only screen and (max-height: 377px) {
+  .land__sec-two {
+    -ms-grid-columns: 97.5vw !important;
+        grid-template-columns: 97.5vw !important;
+  }
+}
+
 @media only screen and (max-width: 53.125em) {
   .land__sec-two {
     -ms-grid-rows: (1fr)[6];
@@ -1060,6 +1103,13 @@ input {
 
 .land__sec-three > * {
   overflow-y: visible;
+}
+
+@media only screen and (max-height: 377px) {
+  .land__sec-three > * {
+    -ms-grid-columns: 97.5vw !important;
+        grid-template-columns: 97.5vw !important;
+  }
 }
 
 .land__sec-three > * > * {
@@ -1234,6 +1284,16 @@ input {
   height: 10px;
 }
 
+@media only screen and (max-height: 377px) {
+  .portrait__grid {
+    -ms-grid-rows: (275vh)[9] !important;
+        grid-template-rows: repeat(9, 275vh) !important;
+    margin-right: 12vw;
+    margin-left: 12vw;
+    background-color: #000;
+  }
+}
+
 @media only screen and (max-width: 53.125em) {
   .portrait__grid {
     -ms-grid-rows: (100vh)[9];
@@ -1258,6 +1318,13 @@ input {
     border-radius: 50px;
     width: 0px;
     height: 0px;
+  }
+}
+
+@media only screen and (max-height: 377px) {
+  .portrait__grid .photo--small {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 

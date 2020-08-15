@@ -22,6 +22,10 @@
     //   @include normalShadow;
     // }
 
+    @include respond(phone-land) {
+      grid-template-columns: 97.5vw !important;
+    }
+
     @include respond(phone) {
       @include elegantScroll(0%, 0px);
       grid-template-columns: 95vw;
@@ -119,6 +123,9 @@
       }
     }
 
+    @include respond(phone-land) {
+      grid-template-columns: 97.5vw !important;
+    }
 
     @include respond(phone) {
       grid-template-rows: repeat(6, 1fr);
@@ -178,9 +185,14 @@
     & > * {
       overflow-y: visible;
       
+      @include respond(phone-land) {
+        grid-template-columns: 97.5vw !important;
+      }
+      
       & > * {
         overflow-y: visible;
         @include normalShadow;
+
 
         @include respond(phone) {
           box-shadow: none;

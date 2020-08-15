@@ -111,6 +111,9 @@
 // Breakpoints //
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone-land {
+        @media only screen and (max-height: 377px) { @content };    //850px
+    }
     @if $breakpoint == smallPhone {
         @media only screen and (max-width: 31.25em) { @content };    //850px
     }

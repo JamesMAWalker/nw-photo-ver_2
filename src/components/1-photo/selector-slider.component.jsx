@@ -25,10 +25,6 @@ class SelectorSlider extends Component {
     console.log(currCat);
     
     const { [currCat]: cat } = this.state;
-    
-
-    // console.log(prevState);
-    // TODO: Passed in previous photo identifiers. Just need to correlate them to the dispalyed photo somehow. 
 
     const settings = {
       fade: currCat === 'dreams' ? true : false,
