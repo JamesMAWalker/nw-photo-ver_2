@@ -1,0 +1,122 @@
+.contact {
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  &-container {
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white-1;
+    letter-spacing: 2px;
+    font-weight: 300;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    
+  }
+
+  &-splash {
+    @include normalShadow;
+    width: 40%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: 99;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &-info {
+    position: relative;
+    width: 60%;
+    height: 100vh;
+    background-color: $color-secondary-tr;
+    border: 2px solid $color-grey-light-2;
+    border-left: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(phone) {
+      @include bgimggrad($color-secondary-tr, $color-secondary-tr, 'https://res.cloudinary.com/jameswalker-work/image/upload/v1597675116/NW_Photography/camera-gear_vqbgbx.jpg');
+      width: 100%;
+      border: none;
+      border-top: 4px solid $color-secondary;
+    }
+
+    &__header {
+      font-size: 8rem;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__sectioner {
+      height: 60%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-25%);
+    }
+
+    .hello {
+      position: absolute;
+      bottom: 5vh;
+      right: 5vw;
+      opacity: 40%;
+      font-family: $font-title;
+      font-size: 7rem;
+      letter-spacing: 2px;
+
+      @include respond(phone) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &-info__sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    transform: scale(1.35);
+
+    @include respond(phone) {
+      transform: scale(1)
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    .contact-icon {
+      min-width: 20px;
+      width: 3vw;
+    }
+
+    .divider {
+      margin: 0;
+      font-weight: 200;
+      transform: scaleX(.5) scaleY(1.25) translateX(-7px);
+
+      @include respond(phone) {
+        transform: scaleX(.5) scaleY(1.25) translateX(0px);
+      }
+    }
+
+    & > * {
+      margin: 1.5rem;
+    }
+  }
+}

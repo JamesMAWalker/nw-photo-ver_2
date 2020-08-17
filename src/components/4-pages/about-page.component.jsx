@@ -8,23 +8,14 @@ import MenuPhone from '../2-menu/menu-container--phone.component';
 import MenuContainer from '../2-menu/menu-container.component';
 
 class AboutPage extends Component {
-
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      isPhone: window.innerWidth < 850
-    };
-  }
-  
   
   render() {
-    const { toggleMenu, menuOpen, history } = this.props;
+    const { toggleMenu, menuOpen, history, isPhone } = this.props;
 
     return (
       <>
         <div className='about'>
-          {this.state.isPhone ? (
+          {isPhone ? (
             <nav>
               <MenuHandle menuOpen={menuOpen} toggleMenu={toggleMenu} />
               <MenuPhone

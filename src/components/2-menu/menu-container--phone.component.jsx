@@ -61,6 +61,9 @@ class MenuPhone extends Component {
           <Link to='/about' className='page-link'>
             about
           </Link>
+          <Link to='/contact' className='page-link'>
+            contact
+          </Link>
         </div>
         <div className='icons__container'>
           <a

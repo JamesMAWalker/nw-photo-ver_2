@@ -57,7 +57,7 @@ class MenuContainer extends Component {
           <Link to='/about' className='page-link'>
             about
           </Link>
-          <Link to='#' className='page-link'>
+          <Link to='/contact' className='page-link'>
             contact
           </Link>
         </div>

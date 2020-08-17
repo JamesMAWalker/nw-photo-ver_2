@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:ital,wght@1,100,300,400&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap);
 /* ------------------------------------- */
 /*	3. Base/Resets
@@ -1589,7 +1589,7 @@ input {
 }
 
 .about__logo {
-  fill: #fe620d;
+  fill: #1a7cb2;
   margin: 1rem;
 }
 
@@ -1644,7 +1644,7 @@ input {
   font-family: "Dawning of a New Day", cursive;
   font-style: normal;
   font-weight: lighter;
-  color: #fe620d;
+  color: #1a7cb2;
   color: #FFC5A6;
 }
 
@@ -1737,5 +1737,186 @@ input {
     background-position: center;
     background-size: cover;
   }
+}
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-container {
+  width: 85%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-container {
+    width: 100%;
+  }
+}
+
+.contact-splash {
+  -webkit-box-shadow: 2px 2px 7px 0px #545454;
+          box-shadow: 2px 2px 7px 0px #545454;
+  width: 40%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-splash {
+    display: none;
+  }
+}
+
+.contact-info {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  background-color: rgba(26, 124, 178, 0.55);
+  border: 2px solid #fafafa;
+  border-left: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-info {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 124, 178, 0.55)), to(rgba(26, 124, 178, 0.55))), url("https://res.cloudinary.com/jameswalker-work/image/upload/v1597675116/NW_Photography/camera-gear_vqbgbx.jpg");
+    background-image: linear-gradient(to bottom, rgba(26, 124, 178, 0.55), rgba(26, 124, 178, 0.55)), url("https://res.cloudinary.com/jameswalker-work/image/upload/v1597675116/NW_Photography/camera-gear_vqbgbx.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border: none;
+    border-top: 4px solid #1a7cb2;
+  }
+}
+
+.contact-info__header {
+  font-size: 8rem;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-info__sectioner {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+
+.contact-info .hello {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+  opacity: 40%;
+  font-family: "Dawning of a New Day", cursive;
+  font-size: 7rem;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-info .hello {
+    font-size: 4rem;
+  }
+}
+
+.contact-info__sub-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-info__sub-container {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.contact-info__sub-container:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.contact-info__sub-container .contact-icon {
+  min-width: 20px;
+  width: 3vw;
+}
+
+.contact-info__sub-container .divider {
+  margin: 0;
+  font-weight: 200;
+  -webkit-transform: scaleX(0.5) scaleY(1.25) translateX(-7px);
+          transform: scaleX(0.5) scaleY(1.25) translateX(-7px);
+}
+
+@media only screen and (max-width: 53.125em) {
+  .contact-info__sub-container .divider {
+    -webkit-transform: scaleX(0.5) scaleY(1.25) translateX(0px);
+            transform: scaleX(0.5) scaleY(1.25) translateX(0px);
+  }
+}
+
+.contact-info__sub-container > * {
+  margin: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,6 +18,7 @@ class App extends Component {
 
     this.state = {
       menuIsOpen: false,
+      isPhone: window.innerWidth < 850,
     };
   }
 
@@ -28,7 +29,7 @@ class App extends Component {
   };
 
   render() {
-    const { menuIsOpen } = this.state;
+    const { menuIsOpen, isPhone } = this.state;
 
     return (
       <Switch>
@@ -60,12 +61,13 @@ class App extends Component {
           render={(rp) => (
             <AboutPage
               menuOpen={menuIsOpen}
+              isPhone={isPhone}
               toggleMenu={this.toggleMenu}
               {...rp}
             />
           )}
         />
-        <Route exact path='/contact' render={(rp) => <ContactPage {...rp} />} />
+        <Route exact path='/contact' render={(rp) => <ContactPage toggleMenu={this.toggleMenu} menuOpen={menuIsOpen} isPhone={isPhone} {...rp} />} />
         <Route
           exact
           path='/:catID'
