@@ -22,7 +22,11 @@ class ContactPage extends Component {
         <div className='contact'>
           {isPhone ? (
             <nav>
-              <MenuHandle style={style} menuOpen={menuOpen} toggleMenu={toggleMenu} />
+              <MenuHandle
+                style={style}
+                menuOpen={menuOpen}
+                toggleMenu={toggleMenu}
+              />
               <MenuPhone
                 toggleMenu={toggleMenu}
                 history={history}
@@ -35,14 +39,20 @@ class ContactPage extends Component {
           <div className='contact-container'>
             <img
               src='https://res.cloudinary.com/jameswalker-work/image/upload/v1597675116/NW_Photography/camera-gear_vqbgbx.jpg'
-              alt=''
+              alt='contact header'
               className='contact-splash'
             />
             <div className='contact-info'>
               <ContactHeader className='contact-info__header' />
               <div className='contact-info__sectioner'>
                 <span className='contact-info__sub-container'>
-                  <InstaIcon className='contact-icon' />
+                  <a
+                    href='https://www.instagram.com/nishellewalkerphotography/'
+                    className='icon-wrapper'
+                    target='blank'
+                  >
+                    <InstaIcon className='contact-icon' />
+                  </a>
                   <span className='divider'>|</span>
                   <a
                     target='blank'
@@ -53,14 +63,28 @@ class ContactPage extends Component {
                   </a>
                 </span>
                 <span className='contact-info__sub-container'>
-                  <EmailIcon className='contact-icon' />
+                  <a
+                    href='mailto:nishelle@nishellewalker.com'
+                    className='icon-wrapper'
+                    target='blank'
+                  >
+                    <EmailIcon className='contact-icon' />
+                  </a>
                   <span className='divider'>|</span>
                   <span>nishelle@nishellewalker.com</span>
                 </span>
                 <span className='contact-info__sub-container'>
-                  <PhoneIcon className='contact-icon' opacity='.75' />
+                  <a
+                    href='tel:8059061221'
+                    className='icon-wrapper'
+                    target='blank'
+                  >
+                    <PhoneIcon className='contact-icon' opacity='.75' />
+                  </a>
                   <span className='divider'>|</span>
-                  <span>(805) 906-1221</span>
+                  <a href='tel:8059061221' className='phone'>
+                    (805) 906-1221
+                  </a>
                 </span>
               </div>
               <span className='hello'>say hello :)</span>
