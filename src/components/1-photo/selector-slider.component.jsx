@@ -71,6 +71,7 @@ class SelectorSlider extends Component {
                       key={uuid()}
                       src={photo.link}
                       alt={photo.name}
+                      
                     />
                   ))}
                 </div>

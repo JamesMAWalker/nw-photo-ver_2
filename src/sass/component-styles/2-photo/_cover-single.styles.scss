@@ -9,14 +9,21 @@
     height: 100%;
     object-fit: cover;
   }
-}
 
-.photo-single {
+  .photo-single {
   height: 100%;
   width: 100%;
   object-position: center;
   object-fit: contain;
   align-self: center;
+
+  &--truncated {
+    object-fit: cover;
+
+    @include aspectMQ(macPro) {
+      object-position: right;
+    }
+  }
 
   @include aspectMQ(macPro) {
     object-fit: cover;
@@ -26,3 +33,5 @@
     object-position: 95% 0;
   }
 }
+}
+

@@ -461,7 +461,7 @@ input {
   }
 }
 
-.photo-single {
+.cover-single .photo-single {
   height: 100%;
   width: 100%;
   -o-object-position: center;
@@ -473,15 +473,27 @@ input {
       align-self: center;
 }
 
+.cover-single .photo-single--truncated {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media only screen and (max-aspect-ratio: 15 / 9) {
-  .photo-single {
+  .cover-single .photo-single--truncated {
+    -o-object-position: right;
+       object-position: right;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 15 / 9) {
+  .cover-single .photo-single {
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
 
 @media only screen and (max-width: 53.125em) {
-  .photo-single {
+  .cover-single .photo-single {
     -o-object-position: 95% 0;
        object-position: 95% 0;
   }
@@ -587,6 +599,8 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   z-index: 9;
   bottom: 7%;
   opacity: 0;
@@ -1339,22 +1353,22 @@ input {
 .portrait__col--1 {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
 }
 
 .portrait__col--2 {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 7fr 3fr;
-      grid-template-rows: 7fr 3fr;
+  -ms-grid-rows: 65% 35%;
+      grid-template-rows: 65% 35%;
 }
 
 .portrait__col--3 {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
 }
 
 .photo-wrapper {
@@ -1409,6 +1423,14 @@ input {
   width: 78vw !important;
   height: 80vh;
   z-index: 99;
+}
+
+.photo--largefloat {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #787878a6;
 }
 
 @media only screen and (max-width: 53.125em) {
@@ -1793,7 +1815,7 @@ input {
   width: 60%;
   height: 100vh;
   background-color: rgba(26, 124, 178, 0.55);
-  border: 2px solid #fafafa;
+  border: 8px solid #fafafa;
   border-left: none;
   display: -webkit-box;
   display: -ms-flexbox;

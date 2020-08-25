@@ -13,20 +13,20 @@ class CoverSingle extends Component {
   }
 
   render() {
-
+    const { currCat } = this.props;
     const { singleCover } = this.state;
 
     const style = {
       objectPosition: '0% 36% !important',
     };
 
-    console.log(style);
+    let coverSize = currCat === 'home' ? '--truncated' : '';
 
     return (
-      <div className='cover-single' >
+      <div className='cover-single'>
         <img
           style={style}
-          className='photo-single'
+          className={`photo-single photo-single${coverSize}`}
           src={singleCover.link}
           alt={singleCover.name}
           key={singleCover.name}

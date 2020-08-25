@@ -3,6 +3,12 @@
     width: 78vw !important;
     height: 80vh;
     z-index: 99;
+
+    &float {
+      object-position: center;
+      object-fit: contain;
+      background-color: $color-grey-dark-2;
+    }
     
     @include respond(phone) {
       width: 100% !important;

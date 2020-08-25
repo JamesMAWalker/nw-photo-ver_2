@@ -30,7 +30,7 @@ class LandingPage extends Component {
           name='home'
           onClick={this.toHome}
         />
-        <PhotoContainer toHome={this.toHome} />
+        <PhotoContainer menuOpen={menuOpen} toggleMenu={toggleMenu} toHome={this.toHome} />
       </div>
     );
   }

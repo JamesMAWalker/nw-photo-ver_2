@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import { v4 as uuid } from 'uuid';
+
 class PhotoLarge extends Component {
 
   render() {
-    const { alt, src, key } = this.props;
-    
+    const { alt, src } = this.props;
 
     return (
       <img
-        key={key}
+        key={uuid()}
         src={src}
         alt={alt}
-        className={`photo--large photo--large`}
+        className={`photo--large photo--large${alt}`}
       />
     );
   }

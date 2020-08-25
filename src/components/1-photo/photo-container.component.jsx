@@ -32,7 +32,7 @@ class PhotoContainer extends Component {
   }
 
   render() {
-    let { currCat, prevState } = this.props;
+    let { currCat, prevState, menuOpen, history } = this.props;
 
       if (currCat === 'home' || currCat === undefined) {
         return (
@@ -40,7 +40,7 @@ class PhotoContainer extends Component {
             onClick={this.handleClick}
             className={`photo-container photo-container--${this.resize()}`}
           >
-            <CoverSingle />
+            <CoverSingle currCat={currCat} />
           </div>
         );
       } else if (currCat === 'calories') {
