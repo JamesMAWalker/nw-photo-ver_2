@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import HomePage from './components/4-pages/home-page.component';
@@ -30,60 +31,73 @@ class App extends Component {
     const { menuIsOpen, isPhone } = this.state;
 
     return (
-      <Switch>
-        <Route
-          exact
-          path='/'
-          render={(rp) => (
-            <LandingPage
-              menuOpen={menuIsOpen}
-              toggleMenu={this.toggleMenu}
-              {...rp}
-            />
-          )}
-        />
-        <Route
-          exact
-          path='/home'
-          render={(rp) => (
-            <HomePage
-              menuOpen={menuIsOpen}
-              toggleMenu={this.toggleMenu}
-              {...rp}
-            />
-          )}
-        />
-        <Route
-          exact
-          path='/about'
-          render={(rp) => (
-            <AboutPage
-              menuOpen={menuIsOpen}
-              isPhone={isPhone}
-              toggleMenu={this.toggleMenu}
-              {...rp}
-            />
-          )}
-        />
-        <Route exact path='/contact' render={(rp) => <ContactPage toggleMenu={this.toggleMenu} menuOpen={menuIsOpen} isPhone={isPhone} {...rp} />} />
-        <Route
-          exact
-          path='/:catID'
-          render={(rp) => (
-            <CategoryPage
-              menuOpen={menuIsOpen}
-              toggleMenu={this.toggleMenu}
-              {...rp}
-            />
-          )}
-        />
-        <Route
-          exact
-          path='/:catID/:photoID'
-          render={(rp) => <FullPhotoPage {...rp} />}
-        />
-      </Switch>
-    );
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route
+            exact
+            path='/'
+            render={(rp) => (
+              <LandingPage
+                menuOpen={menuIsOpen}
+                toggleMenu={this.toggleMenu}
+                {...rp}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/home'
+            render={(rp) => (
+              <HomePage
+                menuOpen={menuIsOpen}
+                toggleMenu={this.toggleMenu}
+                {...rp}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/about'
+            render={(rp) => (
+              <AboutPage
+                menuOpen={menuIsOpen}
+                isPhone={isPhone}
+                toggleMenu={this.toggleMenu}
+                {...rp}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/contact'
+            render={(rp) => (
+              <ContactPage
+                toggleMenu={this.toggleMenu}
+                menuOpen={menuIsOpen}
+                isPhone={isPhone}
+                {...rp}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/:catID'
+            render={(rp) => (
+              <CategoryPage
+                menuOpen={menuIsOpen}
+                toggleMenu={this.toggleMenu}
+                {...rp}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/:catID/:photoID'
+            render={(rp) => <FullPhotoPage {...rp} />}
+          />
+        </Switch>
+      </AnimatePresence>
+    )
   }
 }
 

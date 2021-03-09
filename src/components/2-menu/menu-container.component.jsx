@@ -74,7 +74,7 @@ class MenuContainer extends Component {
             <FbIcon classN='social-icon' />
           </a>
         </div>
-        <p className='copyright'>NishelleWalkerPhotography &copy;2020</p>
+        <p className='copyright'>Nishelle Walker Photography &copy;2020</p>
       </div>
     );
   }

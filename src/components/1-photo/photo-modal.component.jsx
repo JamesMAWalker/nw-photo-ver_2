@@ -1,22 +1,45 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
-// Accepts a photo url as prop and erects a full screen modal with an underlying overlay.
+import { CloseButton } from '../5-icons/icons.components'
 
 const PhotoModal = ({ action, srcLink }) => {
+  
+  const keyCatchRef = useRef(null)
+
+  useEffect(() => {
+    keyCatchRef.current.focus()
+  }, [])
+
+  const handleKeypress = (e) => {
+    if (e.key === 'Escape') {
+      action()
+    }
+  }
+
   return (
-    <div className='modal-overlay' onClick={action}>
+    <motion.div
+      ref={keyCatchRef}
+      className='modal-overlay'
+      onClick={action}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      tabIndex='1'
+      onKeyDown={handleKeypress}
+    >
       <div className='modal'>
-      <div className='close-btn' onClick={action}>
-        X
-      </div>
         <div
           className='photo'
-          onClick={(e) => e.stopPropagation()}
+          // onClick={(e) => e.stopPropagation()}
         >
-          <img src={srcLink} alt=""/>
+          <div className='close-btn' onClick={action}>
+            <CloseButton />
+          </div>
+          <img src={srcLink} alt='' />
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -10,31 +10,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 1s;
+  transition: all .4s;
+
+  @include respond(phone) {
+    align-items: flex-start;
+  }
 
   .modal {
     position: relative;
-    height: 95%;
-    width: 97%;
-    background-color: $color-white-2;
+    height: calc(100% - 5vh);
+    width: calc(100% - 5vh);
+    background-color: transparent;
+
+    @include respond(phone) {
+      // transform: translateY(-2vh);
+      // height: 100%;
+    }
   }
 
   .photo {
+    position: relative;
     height: 100%;
     width: 100%;
 
     img {
       height: 100%;
       width: 100%;
+      object-fit: contain;
+      object-position:calc(100%-2vh);
     }
   }
 
   .close-btn {
+    z-index: 9;
     cursor: pointer;
     position: absolute;
-    top: 5vh;
-    right: 5vh;
-    font-size: 5rem;
+    top: 6vh;
+    right: 6vh;
     color: $color-grey-light-2;
+
+    &:hover {
+      path {
+        fill: $color-white-2;
+      }
+    }
+
+    path {
+      fill: $color-grey;
+      transition: all .2s;
+    }
   }
 }

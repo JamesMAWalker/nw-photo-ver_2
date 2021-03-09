@@ -20,7 +20,7 @@ class HomePage extends Component {
           history={history}
         />
         <MenuHandle toggleMenu={toggleMenu} menuOpen={menuOpen} />
-        <PhotoContainer menuOpen={menuOpen} currCat={pathName} />
+        <PhotoContainer toggleMenu={toggleMenu} menuOpen={menuOpen} currCat={pathName} />
       </div>
     );
   } 

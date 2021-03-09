@@ -1,71 +1,81 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
-import CoverSlider from './cover-slider.component';
-import CoverSingle from './cover-single.component';
-import LandGrid from './land-grid.component';
-import PortraitGrid from './portrait-grid.component';
-import SelectorSlider from './selector-slider.component';
-
+import CoverSlider from './cover-slider.component'
+import CoverSingle from './cover-single.component'
+import LandGrid from './land-grid.component'
+import PortraitGrid from './portrait-grid.component'
+import SelectorSlider from './selector-slider.component'
 
 class PhotoContainer extends Component {
-
-  
   resize = () => {
-    const { currCat } = this.props;
-    let contSize;
+    const { currCat } = this.props
+    let contSize
 
     if (currCat !== undefined) {
-      contSize = currCat !== 'home' ? '78' : '85';
+      contSize = currCat !== 'home' ? '78' : '85'
     } else if (currCat === undefined) {
       contSize = '100'
-    }    
-    return contSize;
+    }
+    return contSize
   }
 
   handleClick = () => {
-    const { pathname } = this.props.location;
-    
+    const { pathname } = this.props.location
+
     if (pathname === '/') {
       this.props.toHome()
     }
   }
 
   render() {
-    let { currCat, prevState, menuOpen, history } = this.props;
+    const {
+      currCat,
+      prevState,
+      menuOpen,
+      history,
+      toggleMenu,
+    } = this.props
 
-      if (currCat === 'home' || currCat === undefined) {
-        return (
-          <div
-            onClick={this.handleClick}
-            className={`photo-container photo-container--${this.resize()}`}
-          >
-            <CoverSingle currCat={currCat} />
-          </div>
-        );
-      } else if (currCat === 'calories') {
-        return (
-          <div
-            style={{ justifyContent: 'flex-start' }}
-            className={`photo-container photo-container--${this.resize()}`}
-          >
-            <LandGrid currCat={currCat} />
-          </div>
-        );
-      } else if (currCat === 'portrait') {
-        return (
-          <div className={`photo-container photo-container--${this.resize()}`}>
-            <PortraitGrid currCat={currCat} />
-          </div>
-        )
-      } else if (currCat === 'dreams' || 'editorial') {
-        return (
-          <div className={`photo-container photo-container--${this.resize()}`}>
-            <SelectorSlider currCat={currCat} prevState={prevState} />
-          </div>
-        );
-      }
+    if (currCat === 'home' || currCat === undefined) {
+      return (
+        <div
+          onClick={this.handleClick}
+          className={`photo-container photo-container--${this.resize()}`}
+        >
+          <CoverSingle currCat={currCat} toggleMenu={toggleMenu} />
+        </div>
+      )
+    } else if (currCat === 'calories') {
+      return (
+        <div
+          style={{ justifyContent: 'flex-start' }}
+          className={`photo-container photo-container--${this.resize()}`}
+        >
+          <LandGrid currCat={currCat} />
+        </div>
+      )
+    } else if (currCat === 'portrait') {
+      return (
+        <div
+          className={`photo-container photo-container--${this.resize()}`}
+        >
+          <PortraitGrid currCat={currCat} />
+        </div>
+      )
+    } else if (currCat === 'dreams' || 'editorial') {
+      return (
+        <div
+          className={`photo-container photo-container--${this.resize()}`}
+        >
+          <SelectorSlider
+            currCat={currCat}
+            prevState={prevState}
+          />
+        </div>
+      )
+    }
   }
 }
 
-export default withRouter(PhotoContainer);
+export default withRouter(PhotoContainer)

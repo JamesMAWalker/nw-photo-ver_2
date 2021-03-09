@@ -13,7 +13,7 @@ class CoverSingle extends Component {
   }
 
   render() {
-    const { currCat } = this.props;
+    const { currCat, toggleMenu } = this.props;
     const { singleCover } = this.state;
 
     const style = {
@@ -23,7 +23,9 @@ class CoverSingle extends Component {
     let coverSize = currCat === 'home' ? '--truncated' : '';
 
     return (
-      <div className='cover-single'>
+      <div className='cover-single'
+        onClick={toggleMenu}
+      >
         <img
           style={style}
           className={`photo-single photo-single${coverSize}`}

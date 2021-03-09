@@ -7,6 +7,7 @@ import { PHOTO_DATA } from '../../data-store/photos.data';
 import PhotoLarge from './photo-large.component';
 import { NextArr } from '../5-icons/icons.components'
 import { PrevArr } from '../5-icons/icons.components'
+import PhotoModal from './photo-modal.component'
 
 class SelectorSlider extends Component {
 
@@ -16,15 +17,15 @@ class SelectorSlider extends Component {
     this.state = {
       dreams: Object.values(PHOTO_DATA.dreams.photos),
       editorial: Object.values(PHOTO_DATA.editorial.photos),
+      modalOpen: false,
+      modalContent: null
     }
   }
   
-
   render() {
     const { currCat, prevState } = this.props;
-    console.log(currCat);
     
-    const { [currCat]: cat } = this.state;
+    const { [currCat]: cat, modalOpen, modalContent } = this.state;
 
     const settings = {
       fade: currCat === 'dreams' ? true : false,
@@ -171,6 +172,11 @@ class SelectorSlider extends Component {
       ),
     }
 
+    const handleModalOpen = (link) => {
+      this.setState({ modalOpen: !this.state.modalOpen })
+      this.setState({ modalContent: link })
+    }
+
     return (
       <>
         <Media
@@ -181,8 +187,19 @@ class SelectorSlider extends Component {
         >
           {(matches) => (
             <Fragment>
+              {modalOpen && (
+                <PhotoModal
+                  srcLink={modalContent}
+                  action={() =>
+                    this.setState({ modalOpen: false })
+                  }
+                />
+              )}
               {matches.desk && (
-                <Slider className='selector__slider' {...settings}>
+                <Slider
+                  className='selector__slider'
+                  {...settings}
+                >
                   {cat.map((photo) => (
                     <PhotoLarge
                       catID={currCat}
@@ -190,6 +207,9 @@ class SelectorSlider extends Component {
                       key={uuid()}
                       src={photo.link}
                       alt={photo.name}
+                      action={() =>
+                        handleModalOpen(photo.link)
+                      }
                     />
                   ))}
                 </Slider>
@@ -203,7 +223,9 @@ class SelectorSlider extends Component {
                       key={uuid()}
                       src={photo.link}
                       alt={photo.name}
-                      
+                      action={() =>
+                        handleModalOpen(photo.link)
+                      }
                     />
                   ))}
                 </div>
@@ -212,7 +234,7 @@ class SelectorSlider extends Component {
           )}
         </Media>
       </>
-    );
+    )
   }
 }
 

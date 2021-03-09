@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import { motion } from 'framer-motion'
 
 import CategoryLink from './category-link.component';
 import { InstaIcon } from '../5-icons/icons.components'
@@ -9,48 +10,41 @@ import { MediumIcon } from '../5-icons/icons.components'
 
 import { PHOTO_DATA } from '../../data-store/photos.data';
 
-class MenuPhone extends Component {
-  constructor(props) {
-    super(props);
+const MenuPhone = (props) => {
+  const photoData = [
+    PHOTO_DATA.calories,
+    PHOTO_DATA.portrait,
+    PHOTO_DATA.dreams,
+    PHOTO_DATA.editorial,
+  ]
 
-    this.state = {
-      photoData: [
-        PHOTO_DATA.calories,
-        PHOTO_DATA.portrait,
-        PHOTO_DATA.dreams,
-        PHOTO_DATA.editorial,
-      ],
-    };
-  }
-
-  renderLinks = (list) => {
-    const { history } = this.props;
+  const renderLinks = (list) => {
+    const { history } = props;
 
     return list.map((e) => (
-      <CategoryLink changeCat={history.push} key={uuid()} name={e.name} />
+      <CategoryLink changeCat={history.push} key={uuid()} name={e.name.toLowerCase()} />
     ));
   };
 
-  handleLogoClick = () => {
-    this.props.history.push('/home');
+  const handleLogoClick = () => {
+    props.history.push('/home');
   };
 
-  render() {
-    const { photoData } = this.state;
-    const { menuOpen, toggleMenu } = this.props;
+  const { menuOpen, toggleMenu } = props;
 
-    let openClose = {
-      display: menuOpen ? 'flex' : 'none',
-    };
-
-    return (
-      <div
-        style={openClose}
+  return (
+    menuOpen && (
+      <motion.div
         onClick={() => toggleMenu()}
         className='menu-container--phone'
+        initial={{ opacity: 0, y: '20vh' }}
+        transition={{ duration: 1, ease: [0.6, 0.05, -0.01, 0.9] }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: '100vh' }}
       >
-    
-        <div className='links__container'>{this.renderLinks(photoData)}</div>
+        <div className='links__container'>
+          {renderLinks(photoData)}
+        </div>
         <div className='menu-divider'></div>
         <div className='site-links__container'>
           <Link to='/home' className='page-link'>
@@ -77,10 +71,12 @@ class MenuPhone extends Component {
             <FbIcon classN='social-icon' />
           </a>
         </div>
-        <p className='copyright'>NishelleWalkerPhotography &copy;2020</p>
-      </div>
-    );
-  }
+        <p className='copyright'>
+          Nishelle Walker Photography &copy;2020
+        </p>
+      </motion.div>
+    )
+  )
 }
 
 export default MenuPhone;

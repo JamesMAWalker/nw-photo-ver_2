@@ -6,13 +6,14 @@ import { v4 as uuid } from 'uuid';
 class PhotoLarge extends Component {
 
   render() {
-    const { alt, src } = this.props;
+    const { alt, src, action } = this.props;
 
     return (
       <img
         key={uuid()}
         src={src}
         alt={alt}
+        onClick={action}
         className={`photo--large photo--large${alt}`}
       />
     );

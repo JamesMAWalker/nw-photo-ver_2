@@ -115,7 +115,7 @@ input {
   position: absolute;
   top: 1.5rem;
   left: 4rem;
-  z-index: 99;
+  /* z-index: 99; */
   fill: white;
 }
 
@@ -124,7 +124,7 @@ input {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 1rem;
-  z-index: 99;
+  /* z-index: 99; */
   fill: #c9c9c9;
 }
 
