@@ -3,10 +3,10 @@ import React, { Component, Fragment } from 'react';
 import MenuContainer from '../2-menu/menu-container.component';
 import MenuPhone from '../2-menu/menu-container--phone.component';
 import MenuHandle from '../2-menu/menu-handle.component';
-import { ReactComponent as InstaIcon } from '../../Icons/insta-icon.svg';
-import { ReactComponent as EmailIcon } from '../../Icons/email-icon.svg';
-import { ReactComponent as PhoneIcon } from '../../Icons/phone-icon.svg';
-import { ReactComponent as ContactHeader } from '../../Icons/contact-header.svg';
+import { InstaIcon } from '../5-icons/icons.components'
+import { EmailIcon } from '../5-icons/icons.components'
+import { PhoneIcon } from '../5-icons/icons.components'
+import { ContactHeader} from '../5-icons/icons.components'
 
 class ContactPage extends Component {
   
@@ -43,7 +43,7 @@ class ContactPage extends Component {
               className='contact-splash'
             />
             <div className='contact-info'>
-              <ContactHeader className='contact-info__header' />
+              <ContactHeader classN='contact-info__header' />
               <div className='contact-info__sectioner'>
                 <span className='contact-info__sub-container'>
                   <a
@@ -51,7 +51,7 @@ class ContactPage extends Component {
                     className='icon-wrapper'
                     target='blank'
                   >
-                    <InstaIcon className='contact-icon' />
+                    <InstaIcon classN='contact-icon' />
                   </a>
                   <span className='divider'>|</span>
                   <a
@@ -68,7 +68,7 @@ class ContactPage extends Component {
                     className='icon-wrapper'
                     target='blank'
                   >
-                    <EmailIcon className='contact-icon' />
+                    <EmailIcon classN='contact-icon' />
                   </a>
                   <span className='divider'>|</span>
                   <span>nishelle@nishellewalker.com</span>
@@ -79,7 +79,7 @@ class ContactPage extends Component {
                     className='icon-wrapper'
                     target='blank'
                   >
-                    <PhoneIcon className='contact-icon' opacity='.75' />
+                    <PhoneIcon classN='contact-icon' opacity='.75' />
                   </a>
                   <span className='divider'>|</span>
                   <a href='tel:8059061221' className='phone'>

@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 
-import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
-import { ReactComponent as Divider } from '../../Icons/title-divider.svg';
+import { Divider } from '../5-icons/icons.components'
 import MenuHandle from '../2-menu/menu-handle.component';
 import MenuPhone from '../2-menu/menu-container--phone.component';
 import MenuContainer from '../2-menu/menu-container.component';
@@ -34,7 +32,7 @@ class AboutPage extends Component {
                 <br />
                 <span className='about__heading--2'>Nishelle</span>
               </h1>
-              <Divider className='divider' />
+              <Divider classN='divider' />
               <span className='about__text--1'>
                 Nishelle loves to tell stories... through her photography.
               </span>

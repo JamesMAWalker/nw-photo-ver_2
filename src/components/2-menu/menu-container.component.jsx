@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { withRouter } from 'react-router-dom';
-import Media from 'react-media';
 
 import CategoryLink from './category-link.component';
-import { ReactComponent as InstaIcon } from '../../Icons/insta-icon-black.svg';
-import { ReactComponent as FbIcon } from '../../Icons/fb-icon-black.svg';
-import { ReactComponent as MediumIcon } from '../../Icons/med-icon-black.svg';
-import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
-import MenuPhone from './menu-container--phone.component';
+import { InstaIcon } from '../5-icons/icons.components'
+import { FbIcon } from '../5-icons/icons.components'
+import { MediumIcon } from '../5-icons/icons.components'
+import { Logo } from '../0-logo/logo.component'
 
 import { PHOTO_DATA } from '../../data-store/photos.data';
 
@@ -45,8 +43,8 @@ class MenuContainer extends Component {
       <div className='menu-container--open'>
         <Logo
           name='home'
-          onClick={this.handleLogoClick}
-          className='site-logo--menu'
+          action={this.handleLogoClick}
+          classN='site-logo--menu'
         />
         <div className='links__container'>
           {this.renderLinks(this.state.photoData)}
@@ -67,13 +65,13 @@ class MenuContainer extends Component {
             target='_blank'
             href='https://www.instagram.com/nishellewalkerphotography/'
           >
-            <InstaIcon className='social-icon' />
+            <InstaIcon classN='social-icon' />
           </a>
           <a>
-            <MediumIcon className='social-icon' />
+            <MediumIcon classN='social-icon' />
           </a>
           <a>
-            <FbIcon className='social-icon' />
+            <FbIcon classN='social-icon' />
           </a>
         </div>
         <p className='copyright'>NishelleWalkerPhotography &copy;2020</p>

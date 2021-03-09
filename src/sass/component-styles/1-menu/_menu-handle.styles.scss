@@ -14,6 +14,10 @@
     display: flex;
   }
 
+  svg {
+    filter: drop-shadow(2px 2px 1px $color-shadow);
+  }
+
 }
 
 .menu-closer {

@@ -8,8 +8,6 @@ import ContactPage from './components/4-pages/contact-page.component';
 import FullPhotoPage from './components/4-pages/full-photo-page.component';
 import LandingPage from './components/4-pages/landing-page.component';
 
-import { ReactComponent as Logo } from './Icons/logo-icon-shadow.svg';
-
 import './sass/main.css'
 
 class App extends Component {

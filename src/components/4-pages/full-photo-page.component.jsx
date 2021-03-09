@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { PHOTO_DATA } from '../../data-store/photos.data';
 
-import { ReactComponent as PrevArrow } from '../../Icons/fancier-arr-dark-L.svg';
-import { ReactComponent as NextArrow } from '../../Icons/fancier-arr-dark-R.svg';
+import { PrevArr } from '../5-icons/icons.components'
+import { NextArr } from '../5-icons/icons.components'
 
 class FullPhotoPage extends Component {
 
@@ -76,10 +76,10 @@ class FullPhotoPage extends Component {
           <Link to={`/${catID}`} className='bottom-nav__category-indicator'>[ {catID} ]</Link>
           <div className='bottom-nav__arrows-container'>
             <span onClick={this.changePhoto} value={-1} className='arr-prev'>
-              <PrevArrow/>
+              <PrevArr/>
             </span>
             <span onClick={this.changePhoto} value={1} className='arr-next'>
-              <NextArrow/>
+              <NextArr/>
             </span>
           </div>
           <Link

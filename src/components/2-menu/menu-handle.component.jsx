@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../Icons/logo-icon.svg';
+import { Logo } from '../0-logo/logo.component'
 
 function MenuHandle({ toggleMenu, menuOpen, style }) {
   const handleClick = (e) => {

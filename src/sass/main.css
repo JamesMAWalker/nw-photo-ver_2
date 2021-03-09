@@ -289,6 +289,7 @@ input {
 .social-icon {
   margin: .5rem;
   opacity: .5;
+  fill: black;
 }
 
 .social-icon:hover {
@@ -402,6 +403,11 @@ input {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.menu-handle svg {
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
 }
 
 .menu-closer {
@@ -1664,8 +1670,9 @@ input {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Dawning of a New Day", cursive;
+  font-size: clamp(1rem, calc(1vw + 1rem), 2.5rem);
   font-style: normal;
-  font-weight: lighter;
+  font-weight: 200;
   color: #1a7cb2;
   color: #FFC5A6;
 }
