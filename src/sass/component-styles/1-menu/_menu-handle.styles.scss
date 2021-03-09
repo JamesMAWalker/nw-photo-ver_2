@@ -12,6 +12,11 @@
 
   @include respond(phone) {
     display: flex;
+
+    svg {
+      fill: $color-grey-light-1;
+      height: 7rem;
+    }
   }
 
   svg {
@@ -29,13 +34,15 @@
   font-weight: lighter;
   font-family: $font-primary;
   text-transform: uppercase;
-  transform: scaleY(.8);
   flex-flow: column;
   align-items: flex-end;
   justify-content: space-between;
   z-index: 999;
-  fill: $color-grey-light-3;
   display: none;
+
+  path {
+    fill: $color-grey-dark;
+  }
 
   @include respond(phone) {
     display: flex;

@@ -35,7 +35,7 @@ class CategoryPage extends Component {
                     history={history}
                     menuOpen={menuOpen}
                   />
-                  <MenuHandle toggleMenu={toggleMenu} />
+                  <MenuHandle menuOpen={menuOpen} toggleMenu={toggleMenu} />
                   <PhotoContainer currCat={catID} prevState={prevState} />
                   <PhoneSelector />
                 </div>

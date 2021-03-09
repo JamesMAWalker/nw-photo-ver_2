@@ -23,7 +23,7 @@ class SelectorSlider extends Component {
   }
   
   render() {
-    const { currCat, prevState } = this.props;
+    const { currCat } = this.props;
     
     const { [currCat]: cat, modalOpen, modalContent } = this.state;
 

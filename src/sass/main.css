@@ -412,6 +412,10 @@ input {
     display: -ms-flexbox;
     display: flex;
   }
+  .menu-handle svg {
+    fill: #C9C9C9;
+    height: 7rem;
+  }
 }
 
 .menu-handle svg {
@@ -428,8 +432,6 @@ input {
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
-  -webkit-transform: scaleY(0.8);
-          transform: scaleY(0.8);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -441,8 +443,11 @@ input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 999;
-  fill: #a0a0a0;
   display: none;
+}
+
+.menu-closer path {
+  fill: #7e7e7e;
 }
 
 @media only screen and (max-width: 53.125em) {
