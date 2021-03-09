@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
+import Media from 'react-media'
 import Slider from 'react-slick';
+
 import { PHOTO_DATA } from '../../data-store/photos.data';
 
 class CoverSingle extends Component {
@@ -23,19 +26,29 @@ class CoverSingle extends Component {
     let coverSize = currCat === 'home' ? '--truncated' : '';
 
     return (
-      <div className='cover-single'
-        onClick={toggleMenu}
+      <Media
+        queries={{
+          desk: '(min-width: 53.125em)',
+          phone: '(max-width: 53.125em)',
+        }}
       >
-        <img
-          style={style}
-          className={`photo-single photo-single${coverSize}`}
-          src={singleCover.link}
-          alt={singleCover.name}
-          key={singleCover.name}
-          name='home'
-        />
-      </div>
-    );
+        {(matches) => (
+          <div
+            className='cover-single'
+            onClick={matches.phone ? toggleMenu : null}
+          >
+            <img
+              style={style}
+              className={`photo-single photo-single${coverSize}`}
+              src={singleCover.link}
+              alt={singleCover.name}
+              key={singleCover.name}
+              name='home'
+            />
+          </div>
+        )}
+      </Media>
+    )
   }
 }
 
