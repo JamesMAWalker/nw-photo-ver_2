@@ -9,7 +9,7 @@ class PhotoSmall extends Component {
   };  
 
   render() {
-    const { alt, src, bgco } = this.props;
+    const { alt, src, bgco, action } = this.props;
 
     const plchColor = {
       backgroundColor: bgco,
@@ -17,7 +17,11 @@ class PhotoSmall extends Component {
     };
 
     return (
-      <div style={plchColor} className='photo-wrapper'>
+      <div 
+        style={plchColor} 
+        className='photo-wrapper'
+        onClick={action}
+      >
         <img style={plchColor} className='photo--small' src={src} alt={alt} />
       </div>
     );

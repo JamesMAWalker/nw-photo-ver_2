@@ -1,0 +1,40 @@
+.modal-overlay {
+  z-index: 99999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $color-black-tr;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+
+  .modal {
+    position: relative;
+    height: 95%;
+    width: 97%;
+    background-color: $color-white-2;
+  }
+
+  .photo {
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    font-size: 5rem;
+    color: $color-grey-light-2;
+  }
+}

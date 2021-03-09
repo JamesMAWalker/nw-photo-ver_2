@@ -1378,6 +1378,7 @@ input {
 }
 
 .photo-wrapper {
+  cursor: pointer;
   position: relative;
   height: 100%;
   width: 100%;
@@ -1453,6 +1454,53 @@ input {
 .photo--large--33 {
   -o-object-position: 0 33%;
      object-position: 0 33%;
+}
+
+.modal-overlay {
+  z-index: 99999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.modal-overlay .modal {
+  position: relative;
+  height: 95%;
+  width: 97%;
+  background-color: #fafafa;
+}
+
+.modal-overlay .photo {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-overlay .photo img {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-overlay .close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  font-size: 5rem;
+  color: #fafafa;
 }
 
 .category-selector {
