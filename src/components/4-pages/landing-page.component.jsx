@@ -13,8 +13,15 @@ class LandingPage extends Component {
     this.props.history.push('/home')
   }
 
+  
   render() {
     const { toggleMenu, menuOpen, history } = this.props;
+
+    const onLanding = history.location.pathname === "/"
+      ? 99
+      : "unset"
+
+    console.log(this.props.history);  
 
     return (
       <div className='App'>
@@ -25,7 +32,7 @@ class LandingPage extends Component {
           menuOpen={menuOpen}
         />
         <Logo
-          style={{ cursor: 'pointer'}}
+          zIndex={onLanding}
           classN='site-logo--photo'
           name='home'
           onClick={this.toHome}
