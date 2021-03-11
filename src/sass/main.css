@@ -1518,8 +1518,8 @@ input {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: calc(100%-2vh);
-     object-position: calc(100%-2vh);
+  -o-object-position: center;
+     object-position: center;
 }
 
 .modal-overlay .close-btn {
