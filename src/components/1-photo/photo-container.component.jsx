@@ -15,7 +15,7 @@ class PhotoContainer extends Component {
     if (currCat !== undefined) {
       contSize = currCat !== 'home' ? '78' : '85'
     } else if (currCat === undefined) {
-      contSize = '100'
+      contSize = '85'
     }
     return contSize
   }

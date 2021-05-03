@@ -23,7 +23,8 @@ class CoverSingle extends Component {
       objectPosition: '0% 36% !important',
     };
 
-    let coverSize = currCat === 'home' ? '--truncated' : '';
+    let coverSize =
+      currCat === 'home' ? '--truncated' : '--truncated'
 
     return (
       <Media

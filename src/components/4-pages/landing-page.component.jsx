@@ -25,17 +25,12 @@ class LandingPage extends Component {
 
     return (
       <div className='App'>
-        <MenuHandle toggleMenu={toggleMenu} />
+        {/* <MenuHandle toggleMenu={toggleMenu} /> */}
+        <MenuContainer menuOpen={menuOpen} history={history}/>
         <MenuPhone
           toggleMenu={toggleMenu}
           history={history}
           menuOpen={menuOpen}
-        />
-        <Logo
-          zIndex={onLanding}
-          classN='site-logo--photo'
-          name='home'
-          onClick={this.toHome}
         />
         <PhotoContainer menuOpen={menuOpen} toggleMenu={toggleMenu} toHome={this.toHome} />
       </div>
