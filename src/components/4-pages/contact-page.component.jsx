@@ -1,20 +1,27 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 
-import MenuContainer from '../2-menu/menu-container.component';
-import MenuPhone from '../2-menu/menu-container--phone.component';
-import MenuHandle from '../2-menu/menu-handle.component';
-import { InstaIcon } from '../5-icons/icons.components'
-import { EmailIcon } from '../5-icons/icons.components'
-import { PhoneIcon } from '../5-icons/icons.components'
-import { ContactHeader} from '../5-icons/icons.components'
+import MenuContainer from '../2-menu/menu-container.component'
+import MenuPhone from '../2-menu/menu-container--phone.component'
+import MenuHandle from '../2-menu/menu-handle.component'
+import {
+  ContactHeader,
+  InstaIcon,
+  EmailIcon,
+  PhoneIcon,
+  SmsIcon,
+} from '../5-icons/icons.components'
 
 class ContactPage extends Component {
-  
   render() {
-    const { isPhone, menuOpen, toggleMenu, history } = this.props;
+    const {
+      isPhone,
+      menuOpen,
+      toggleMenu,
+      history,
+    } = this.props
     const style = {
-      fill: "white",
-      transform: "scale(.8)"
+      fill: 'white',
+      transform: 'scale(.8)',
     }
 
     return (
@@ -47,7 +54,7 @@ class ContactPage extends Component {
               <div className='contact-info__sectioner'>
                 <span className='contact-info__sub-container'>
                   <a
-                    href='https://www.instagram.com/nishellewalkerphotography/'
+                    href='https://www.instagram.com/nishellemariephotography/'
                     className='icon-wrapper'
                     target='blank'
                   >
@@ -56,33 +63,50 @@ class ContactPage extends Component {
                   <span className='divider'>|</span>
                   <a
                     target='blank'
-                    href='https://www.instagram.com/nishellewalkerphotography/'
+                    href='https://www.instagram.com/nishellemariephotography/'
                     className='insta'
                   >
-                    @nishellewalkerphotography
+                    @nishellemariephotography
                   </a>
                 </span>
                 <span className='contact-info__sub-container'>
                   <a
                     href='mailto:nishelle@nishellewalker.com'
                     className='icon-wrapper'
-                    target='blank'
+                    target='_blank'
                   >
                     <EmailIcon classN='contact-icon' />
                   </a>
                   <span className='divider'>|</span>
-                  <span>nishelle@nishellewalker.com</span>
+                  <span>
+                    <a
+                      href='mailto:nishelle@nishellewalker.com'
+                      className='icon-wrapper'
+                      target='blank'
+                    >
+                      nishelle@nishellewalker.com
+                    </a>
+                  </span>
                 </span>
                 <span className='contact-info__sub-container'>
                   <a
-                    href='tel:8059061221'
+                    href='sms:8059061221'
                     className='icon-wrapper'
                     target='blank'
                   >
-                    <PhoneIcon classN='contact-icon' opacity='.75' />
+                    {/* <PhoneIcon
+                      classN='contact-icon'
+                      opacity='.75'
+                    /> */}
+                    <SmsIcon
+                      classN='contact-icon'
+                    />
                   </a>
                   <span className='divider'>|</span>
-                  <a href='tel:8059061221' className='phone'>
+                  <a
+                    href='sms:8059061221'
+                    className='phone'
+                  >
                     (805) 906-1221
                   </a>
                 </span>
@@ -92,8 +116,8 @@ class ContactPage extends Component {
           </div>
         </div>
       </Fragment>
-    );
+    )
   }
 }
 
-export default ContactPage;
+export default ContactPage
