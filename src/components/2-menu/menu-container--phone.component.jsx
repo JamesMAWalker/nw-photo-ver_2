@@ -60,7 +60,7 @@ const MenuPhone = (props) => {
         <div className='icons__container'>
           <a
             target='_blank'
-            href='https://www.instagram.com/nishellewalkerphotography/'
+            href='https://www.instagram.com/nishellemariephotography/'
           >
             <InstaIcon classN='social-icon' />
           </a>
